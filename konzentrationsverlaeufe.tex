@@ -1,0 +1,36 @@
+\section{Konzentrationsverläufe spezieller Reaktionen}
+\subsection{Reversible Reaktion 1. Ordnung}
+\[ \chemie{A_1} \chemie{EQUILIBRIUM}{k1}{k2} \chemie{A_2} \]
+\[ R_1 = \frac{dc_1}{dt} = - k_1 c_1 + k_2 c_2 \]
+\[ K = \frac{c_2^*}{c_1^*} = \frac{c_{10} - c_1^*}{c_1^*} \]
+$^*$ bedeutet: Gleichgewichtskonzentration
+\[ \ln \frac{c_1 - c_1^*}{c_{10} - c_1^*} = - (k_1+k_2)t \]
+{\bf Hier Bild  Konzentrationsverlauf}
+
+\subsection{Parallelreaktion}
+\[ \chemie{A_1} \chemie{GIVES}{k_1} \chemie{A_2} \hbox{gleichzeitig}  \chemie{A_1} \chemie{GIVES}{k_2} \chemie{A_3} \]
+\[ \frac{dc_1}{dt} = - (k_1 + k_2) c_1 \quad \leadsto \quad \frac{c_1}{c_{10}} = \exp\left[-(k_1+k_2)t\right] \]
+{\bf Hier Bild  Konzentrationsverlauf}
+Hier auch wichtig: Globale Selektivität \[ S = \frac{c_2 - c_{20}}{c_3 - c_{30}} = \frac{k_1}{k_2} \]
+
+\subsection{Folgereaktionen}
+\[\chemie{A_1} \chemie{GIVES}{k_1} \chemie{A_2} \chemie{GIVES}{k_2} \chemie{A_3}\]
+
+\subsubsection{Bildungsgeschwindigkeiten}
+\[ R_1 = \frac{dc_1}{dt} = -k_1 c_1 \quad \leadsto \quad c_1(t) = c_{10} \exp(-k_1t) \]
+\[ R_2 = \frac{dc_2}{dt} = k_1c_1 - k_2c_2 \]
+\[ R_3 = \frac{dc_3}{dt} = k_2 c_2 \]
+\subsubsection{Quastistationaritätsprinzip nach {\sc Bodenstein}}
+Wenn $\frac{dc_2}{dt}$ sehr klein (wegen $k_2 \gg k_1$), dann ist die Konzentration der Zwischenprodukte (nach einer Induktionszeit) \emph{quasistationär}.
+Daraus folgt: \fbox{$ \displaystyle \frac{dc_2}{dt} \approx 0$}
+\subsubsection{Konzentrationsverläufe}
+\begin{enumerate}
+\item $k_1 = k_2$
+\item $k_1 = 20 k_2 \qquad k_1 \gg k_2$
+\item $20 k_1 = k_2 \qquad k_1 \ll k_2$
+\end{enumerate}
+\subsubsection{Anwendung des {\sc Bodenstein}-Prinzips}
+\[ \frac{dc_2}{dt} = k_1c_1 - k_2 c_2 \approx 0 \quad \leadsto k_1 c_1 = k_2 c_2 \]
+mit
+\[ c_1 = c_{10} \exp\left(-k_1t\right) \quad \leadsto \quad c_2 = \frac{k_2}{k_1} c_{10} \exp\left(k_1\right) \]
+

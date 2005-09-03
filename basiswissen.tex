@@ -1,0 +1,72 @@
+\section{Basiswissen}
+\subsection{Konventionen}
+\begin{itemize}
+\item Index $h = 1...L$ - Elemente
+\item Index $i = 1...N$ - Komponenten / Spezies
+\item Index $j = 1...M$ - Teilreaktionen
+\item Exponent $m_i$ - Teilreaktionsordnung bezogen auf $A_i$ (Stöch. Koeffizient?!)
+\item Stöchimetrische Koeffizienten $\nu_i$. $\nu_i < 0$: Edukt, $\nu_i > 0$: Produkt
+\item Elementkoeffient des Elements $h$ in Spezies $i$: $\beta_{hi}$
+\item Geschwindigkeitskoeffizient $k$ $\left[ \frac{mol}{l \cdot s}\right]$
+\item Bildungs- bzw. Verbrauchsgeschwindigkeit $R$ \emph{ Rate of formation / deplition}
+\item Reaktionsgeschwindigkeit $r$
+\end{itemize}
+
+\subsection{Definitionen}
+\begin{itemize}
+\item \emph{ Extensive} Terme: Variablen eines Systems, welche sich bei Teilung des Systems in zwei Teilsysteme ändern. Bsp: $V$, $m$, $n$
+\item \emph{Intensive} Terme: Variablen eines Systems, die bei Teilung des Systems in Teilsysteme konstant bleiben. Bsp: $T$, $p$, $\rho$
+\item Extensive Variablen können durch Normierung über $m$ oder $V$ zu \emph{Pseudo-Intensiven} Variablen umgewandelt werden.
+\item Massenerhaltung 
+\[ \sum_{i=0}^{N} \nu_i M_i = 0 \]
+\end{itemize}
+
+\subsubsection{Reaktionslaufzahl}
+  \begin{displaymath}
+  \fbox{$ \displaystyle \xi = \frac{n_i - n_{i0}}{\nu_i} $}
+  \end{displaymath}
+  \begin{itemize}
+  \item $\xi = 0$: Reaktionsbeginn
+  \item $\xi = 1$: Reaktionsende
+  \item $c_i = c_{i0} + \nu_i \lambda$
+  \item $m_i = m_{i0} + M_i \nu_i \xi$
+  \item $n_i = n_{i0} + \nu_i \xi$
+  \end{itemize}
+
+\subsubsection{Umsatz}
+  \begin{itemize}
+  \item \[ \fbox{$ \displaystyle  \mbox{Umsatz} = \frac{\mbox{Anteil an bereits Reagierter Komponente}}{\mbox{Anfangsmenge der Komponente}}$} \]
+  \item Diskontinuierlich
+  \[ X_i = \frac{n_{i0} - n_i}{n_{i0}} = - \frac{\sum_{j=1}^{M} \nu_{ij} \xi_i}{n_{i0}} \]
+  \item Kontinuierlich
+  \[ \fbox{$ \displaystyle  X_i = \frac{\dot{n}_{i0} - \dot{n}_i}{\dot{n}_{i0}} $} \]
+  \end{itemize}
+
+\subsubsection{Ausbeute}
+  \begin{itemize}
+  \item \[ \fbox{$ \displaystyle  \mbox{Ausbeute} = \frac{\mbox{Menge an gebildetem Produkt k}}{\mbox{Menge an zugegebener, limitierender Komponente i}} $} \]
+  \item Diskontinuierlich
+  \[ Y_{ki} = \frac{\frac{n_k - n_{k0}}{\nu_k}}{\frac{n_{i0}}{\nu_i}} = \frac{n_k - n_{k0}}{n_{i0}} \frac{\left|\nu_i\right|}{\left|\nu_k\right|} \]
+  \item Kontinuierlich 
+  \[ Y_{ki} = \frac{\dot{n}_k - \dot{n}_{k0}}{\dot{n}_{i0}} \frac{\left|\nu_i\right|}{\left|\nu_k\right|} \]
+  \end{itemize}
+
+\subsubsection{Selektivität}
+  \begin{itemize}
+  \item \[ \fbox{$ \displaystyle  \mbox{Selektivität} = \frac{\mbox{Menge an gebildetem Produkt k}}{\mbox{Menge an umgesetztem Reaktanden i}} $} \]
+  \item Diskontinuierlich
+  \[ S_{ki} = \frac{n_k - n_{k0}}{n_{i0} - n_i} \frac{\left|\nu_i\right|}{\left|\nu_k\right|} = \frac{Y_{ki}}{X_i} \]
+  \item Kontinuierlich
+  \[ S_{ki} = \frac{\dot{n}_k - \dot{n}_{k0}}{\dot{n}_{i0} - \dot{n}_i} \frac{\left|\nu_i\right|}{\left|\nu_k\right|} = \frac{Y_{ki}}{X_i} \]
+  \end{itemize}
+
+\subsubsection{Reaktorkenngrößen}
+\begin{itemize}
+\item Produktivität
+\[ L = \dot{n}_k \]
+\item Querschnittsbelastung
+\[ G = \frac{m}{A t} \]
+\item Raum-Zeit-Ausbeute
+\[ STY = \frac{L}{V} = \frac{\dot{n}_k}{V} \]
+\end{itemize}
+
