@@ -1,0 +1,35 @@
+\section{Stöchiometrie chemischer Reaktionen}
+\subsection{Allgemeines}
+$N$ Komponenten: $A_1...A_N$ chemische Spezies\\
+Schlüsselkomponenten: Moländerungen müssen bekannt / messbar sein, um eine Aussage über die Moländerungen der anderen Komponenten zu bekommen.
+Schlüsselreaktionen:
+\[ \frac{dc_i}{dt} = \sum_{j=1}^{M} \nu_{ij} r_j \]
+Anzahl der Mole eines Elements:
+\[ b_h = \sum_{i=1}^N \beta_{hi} n_i \quad \sum_{i=1}^N \beta_{hi} \Delta n_i = 0\]
+
+\subsection{Element-Spezies-Matrix}
+Bsp. Methanolherstellung.
+\begin{table}[h]
+\begin{tabular}{|ccc|ccc|cccc|} \hline
+\multicolumn{3}{|c|}{ } & \multicolumn{7}{|c|}{$N = 7$} \\ \hline
+$h$ & Elem & $i \rightarrow$    & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+    &      & Spez $\rightarrow$ & $C$ & $CH_4$ & $H_2O$ & $H_2$ & $CO$ & $CO_2$ & $ C_2H_6$\\ \hline
+1   & C    &                        & 1 & 1 & 0 & 0 & 1 & 1 & 2 \\
+2   & H    &                        & 0 & 4 & 2 & 2 & 0 & 0 & 6 \\
+3   & O    &			  & 0 & 0 & 1 & 0 & 1 & 2 & 0 \\ \hline
+\multicolumn{3}{|l|}{$L = 3$} & \multicolumn{3}{|c|}{gebunden} & \multicolumn{4}{|c|}{frei} \\ \hline
+\end{tabular}
+\end{table}
+Matrix B hat den Rang $R_{\beta}=3$. \\
+Anzahl der Spezies meist größer als Anzahl der Elemente. Dann miest $R_{\beta} = L$.\\
+\[ R = N - R_{\beta} \]
+\begin{itemize}
+\item $R$ Zahl der Schlüsselkomponenten - Freie Unbekannte
+\item $R_{\beta}$ gebundene Unbekannte - werden berechnet
+\item Anzahl Schlüsselreaktionen = Anzahl Schlüsselkomponenten
+\end{itemize}
+Das System kann von unten gelöst werden: $\Delta n_{H_2} = - \Delta n_{CO} - 2 \Delta n_{CO_2}$ etc.
+
+\subsection{Ermittlung der Schlüsselreaktionen}
+
+

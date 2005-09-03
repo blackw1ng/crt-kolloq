@@ -1,4 +1,4 @@
-\documentclass[8pt,a4paper,twocolumn,german]{scrartcl}
+\documentclass[9pt,a4paper,twocolumn,fleqn,german]{scrartcl}
 
 % enc
 \usepackage[T1]{fontenc}
@@ -30,6 +30,10 @@
 \usepackage[small,compact]{titlesec}
 \usepackage{float}
 
+% itemstacking
+\usepackage{atbeginend}
+\AfterBegin{itemize}{ \addtolength{\itemsep}{-2ex}}
+
 % PPCHTEX
 \usepackage{m-pictex}
 \usepackage{m-ch-de}
@@ -46,8 +50,8 @@ pdfproducer = {LaTeX}
 %\setlength{\textheight}{25cm}
 %\setlength{\topmargin}{-1cm}
 %\setlength{\parskip}{\baselineskip}
-\setlength{\parindent}{0pt}
 \addtolength{\parskip}{-1mm}
+\setlength{\parindent}{0pt}
 
 % brauchen latex2e
 \NeedsTeXFormat{LaTeX2e}
