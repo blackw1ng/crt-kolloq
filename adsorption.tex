@@ -1,0 +1,48 @@
+\section{Grundlagen der Adsorption}
+Bei der Adsorption unterscheidet man zwischen 
+\begin{itemize}
+\item Physisorption 
+\item Chemisorption
+\end{itemize}
+
+\subsection{Eigenschaften}
+\begin{table}[H]
+\begin{tabular}{|l|c|c|} \hline
+		& \bf Physisorption	& \bf Chemisorption \\ \hline
+Adsorbens (s)	& Alle			& Wenige \\
+Adsorpt (g)	& Alle			& Reaktive Gase \\
+Wärme $\frac{kJ}{mol}$ & 8-25		& 20-420 \\
+Geschwindigkeit	& sehr schnell		& variabel \\
+$E_{ads}$	& < 4			& akt: 84, non akt: <4 \\
+Temperatur	& niedrig		& hoch \\
+Belegung	& auch Mehrlagig	& Einlagig \\
+Reversibilität	& hoch			& meist niedrig \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Beschreibung}
+
+{\sc Langmuir}-Adsorptions-Isotherme beschreibt den Belegungsgrad $\theta$.\\
+Annahmen hierbei: Homogene Oberfläche, keine Interaktion zwischen adsorbierten Molekülen.
+\[ \fbox{$ \theta = \frac{K p}{1 + K p} $} \]
+
+Grenzfälle: $K p \ll 1 \rightarrow \theta \approx K p$ \\
+$K p \gg 1 \rightarrow \theta \approx 1$ \\
+
+K kann über die {\sc Van't Hoff}'sche Reaktionsisochore beschrieben werden
+\[ K = K_{\infty} \exp \left( \frac{- \Delta H_{ads}}{RT} \right) \]
+
+Der Gesamtbelegungsgrad ergibt sich aus der Summe der Einzelbelegungen
+\[ \theta = \sum_{i=1}^{N} \theta_i \]
+
+\subsection{Sorptionsisothermen}
+\begin{table}[H]
+\begin{tabular}{|l|c|c|} \hline
+\bf Autor	& \bf Isotherme		& \bf Anwendung \\ \hline
+\sc Langmuir	& $\nu / \nu_m = Kp / (1+Kp)$ & P + C \\
+\sc Henry	& $\nu = a p$	& P + C \\ 
+\sc Freundlich	& $\nu = k p^{1/n}$ & P + C \\
+\sc Slygin-Fumkin & $\nu / \nu_m = k_1 \ln (k_2 p)$ & C \\
+\sc BET		& $\frac{p}{\nu(p_0-p)} = \frac{1}{\nu_mb}+\frac{b-1}{\nu_mb}\frac{p}{p_0}$ & P (multilayer) \\ \hline
+\end{tabular}
+\end{table}
