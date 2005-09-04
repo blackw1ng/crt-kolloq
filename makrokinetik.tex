@@ -12,7 +12,7 @@ Hauptwiderstand für den Massentransport $\rightarrow$ im Pellet\\
 Hauptwiderstand für den Wärmetransport $\rightarrow$ im Film\\
 
 Wirkungsgrad:
-\[ \eta = \frac{\mbox{mittlere Reaktionsgeschwindigkeit im Pellet}}{\mbox{Reaktionsgeschwindigkeit bei Oberflächenbedingungen}} = \frac{r_{e,effektiv}}{r_{s,Oberfläche}} \]
+\[ \eta = \frac{\mbox{mittlere Reaktionsgeschw. im Pellet}}{\mbox{Reaktionsgeschw. bei Oberflächenbedingungen}} = \frac{r_{e,effektiv}}{r_{s,Oberfl.}} \]
 
 \subsection{Porendiffusion im isothermen Katalysatorkorn}
 Annahmen:
@@ -24,11 +24,72 @@ Annahmen:
 \item kugelförmiges Katalysatorpartikel
 \item Katalysatorpartikel ist pseudo-homogenes System
 \end{itemize}
-1. Fick'sches Gesetz: \[ \fbox{$j=D_e\frac{dc}{dx}$} \]
-effektiver Diffusionskoeffizient: \[ \fbox{$D_e=\frac{D\cdot \epsilon}{\tau}$} \]
-$\tau$: Tortuisität\\
-$\epsilon$: Porosität\\
-grobe Näherung: $D_e \approx \frac{1}{10}D$
-\[ \mbox{Diff.-fluss}_{x'+dx}-\mbox{Diff.-fluss}_{x'}=\mbox{Verbrauch durch Reaktion im Volumenelement} \]
+1. {\sc Fick}'sches Gesetz: \[ \fbox{$j=D_e\frac{dc}{dx}$} \]
+effektiver Diffusionskoeffizient: \[ \fbox{$D_e=\frac{D\cdot \varepsilon}{\tau}$} \]
+$\tau$: Tortuisität ("Labyrinth-Faktor")\\
+$\varepsilon_p$: Porosität\\
+{\sc Bruggemann}-Gleichung: $\tau=\frac{1}{\sqrt{\varepsilon_p}}$\\
+grobe Näherung: $D_e \approx \frac{1}{10}D$\\
+Massenbilanz:\\
+\[ \mbox{(Diff.-fluss)}_{x'+dx}-\mbox{(Diff.-fluss)}_{x'}=\mbox{Verbr. d. Rkt. im Vol.-element} \]
 \[ j_{x'+dx}-j_{x'}=\underbrace{\Gamma}_{\mbox{Quelle/Senke}} \]
+Nach Vereinfachung:
+\[ \fbox{$\frac{d^2c}{dx'^2}+\frac{2}{x'}\frac{dc}{dx'}=\frac{kc^n}{D_e}$} \]
+Randbedingungen:\\
+$x'=R \qquad \rightarrow \qquad c=c_s$\\
+$x'=0 \qquad \rightarrow \qquad \frac{dc}{dx'}=0$\\
+{\sc Thiele}-Modul:\\
+\[ \fbox{$\phi=R\cdot \sqrt{\frac{k\cdot c_s^{n-10}}{D_e}}=\sqrt{DaII}=\frac{\mbox{Reaktion}}{\mbox{Diffusion}}$} \]
+$DaII$: {\sc Damköhler}-Zahl 2. Ordnung\\
+$\phi$ klein: niedrige Reaktionsgeschwindigkeit; Reaktion limitiert Gesamtgeschwindigkeit\\
+$\phi$ groß: hohe Reaktionsgeschwindigkeit; Diffusion limitiert Gesamtgeschwindigkeit\\
+Für andere Geometrien $\rightarrow$ modifiziertes Thiele-Modul:
+\[ \phi_P=\frac{V_P}{O_P}\cdot \sqrt{\frac{k\cdot c_s^{n-10}}{D_e}} \]
+$V_P$: Volumen des Pellets\\
+$O_P$: Äußere Oberfläche des Pellets\\
+%hier Grafik 5b S.9 einfügen
+\begin{itemize}
+\item[A:] Kat mit geringer Aktivität: großer $D_e$, kleiner $R$ (großer Wirkungsgrad, aber hoher Druckverlsut)
+\item[B:] angestrebter Betriebszustand: hoher Wirkungsgrad bei großem $\Phi$
+\item[C:] Kat mit hoher Aktivität: niedriger $D_e$, großer $R$ (Diffusion hemmt Reaktionsgeschwindigkeit)
+\end{itemize}
+Bei starker Diffusionshemmung findet die Reaktion nur in der Randzone statt. 
+$\rightarrow$ schnellere Deaktivierung, da Kat unvollständig genutzt\\
+Einfluss der Reaktionsordnung:\\
+{\it was ist hier wirklich wichtig?}
+\subsection{Einfluss der Filmdiffusion auf die heterogene Katalyse}
+Ammoniakoxidation:\\
+\[ \quad \chemie{NH_3} \chemie{PLUS} \chemie{5O_2} \chemie{EQUILIBRIUM}{Pt-Netz}{ca. 900°C} \chemie{4NO} \chemie{PLUS} \chemie{6H_2O} \qquad \Delta H_R = - 906 \frac{kJ}{mol} \]
+Kontaktzeit: $1/1000\,s$ (!)\\
+laminare Filmdicke: $\delta=f\left(u,\rho,\nu,d_p\right)$\\
+Filmtheorie (1. {\sc Fick}'sches Gesetz):\\
+\[ \fbox{$J=-D\frac{dc}{dx}=\underbrace{\frac{D}{\delta}}_{\beta}\cdot\left(c_b-c_s\right)$} \]
+$\beta=f\left(u,\rho,\nu,d_p,D\right)$: Massentransportkoeffizient $\left[\frac{m}{s}\right]$\\
+{\sc Biot}-Zahl:\\
+\[ \fbox{$Bi_m=\frac{\beta\cdot R}{D_e}=\frac{\mbox{Massentransport}}{\mbox{Porendiffusion}}$} \]
+übliche Größenordnung: $Bi_m=100...200$\\
+für $Bi_m>100\rightarrow$ Filmdiffusion ist vernachlässigbar\\
+\[ \eta=f\left(\underbrace{Bi_m}_{Filmdiffusion};\,\underbrace{\Phi}_{Porendiffusion}\right) \]
+\subsection{Einfluss von Wärme- und Massentransport}
+{\sc Prater}-Zahl:
+\[ \fbox{$\beta_{Pr}=\frac{c_b\cdot D_e\cdot\left(-\Delta H_R\right)}{\lambda_e\cdot T_b}=\frac{\mbox{max. $\Delta T$ im Pellet}}{\mbox{Bulk-Temperatur}}=\frac{\Delta T_{max}}{T_b}$} \]
+$\beta_{Pr}>0$: exotherme Reaktion\\
+$\beta_{Pr}<0$: endotherme Reaktion\\
+%was hat es mit \eta>1 auf sich?
+{\sc Arrhenius}-Zahl (Einfluss der Temperatur auf die Reaktion):\\
+\[ \fbox{$\gamma=\frac{E_A}{RT_b}$} \]
+Keine Transporthemmung (willkürliche Festlegung):\\
+$\eta=\frac{r_{obs}}{r\left(T_b,\,c_b\right)}=1\pm 0,05$\\
+{\sc Weisz-Prater}-Kriterium:\\
+\[ \fbox{$\Phi=\frac{r_{obs}\cdot R^2}{c_s\cdot D_e}$} \]
+$\Phi$: {\sc Weisz}-Modul\\
+$\Phi=\phi^2\cdot \eta$\\
+Keine Limitierung durch Porendiffusion, wenn:\\
+$\Phi<6$: Reaktion 0. Ordnung\\
+$\Phi<1$: Reaktion 1. Ordnung\\
+$\Phi<0,3$: Reaktion 2. Ordnung\\
+
+{\sc Weisz-Hicks}-Kriterium:\\
+$\rightarrow$ Pellet nicht isotherem, ausschließlich Porendiffusion\\
+Keine Massen- und Wärmelimitierung falls $\Phi\cdot \exp{\left(\frac{\gamma\cdot\beta_{Pr}}{1+\beta_{Pr}}\right)}<1$
 
