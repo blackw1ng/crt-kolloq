@@ -9,7 +9,7 @@ Anzahl der Mole eines Elements:
 
 \subsection{Element-Spezies-Matrix}
 Bsp. Methanolherstellung.
-\begin{table}[h]
+\begin{table}[H]
 \begin{tabular}{|ccc|ccc|cccc|} \hline
 \multicolumn{3}{|c|}{ } & \multicolumn{7}{|c|}{$N = 7$} \\ \hline
 $h$ & Elem & $i \rightarrow$    & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
@@ -31,5 +31,74 @@ Anzahl der Spezies meist größer als Anzahl der Elemente. Dann miest $R_{\beta} =
 Das System kann von unten gelöst werden: $\Delta n_{H_2} = - \Delta n_{CO} - 2 \Delta n_{CO_2}$ etc.
 
 \subsection{Ermittlung der Schlüsselreaktionen}
+\subsubsection{Über homogene Lösung}
+Ermittle über Linearkombination der gebundenen Komponenten deren stöchiometrische Koeffizienten:
+\begin{table}[H]
+\begin{tabular}{|ccc|cccc|} \hline
+$\nu_{CH_4}$ & $\nu_{H_2O}$ & $\nu_{H_2}$ & $\nu_{CO}$ & $\nu_{CO_2}$ & $\nu_C$ & $\nu_{C_2H6}$ \\ \hline
+$\nu_{CH_4,1}$ & $\nu_{H_2O,1}$ & $\nu_{H_2,1}$ & $1$ & $0$ & $0$ & $0$ \\ 
+$\nu_{CH_4,2}$ & $\nu_{H_2O,2}$ & $\nu_{H_2,2}$ & $0$ & $1$ & $0$ & $0$ \\ 
+$\nu_{CH_4,3}$ & $\nu_{H_2O,3}$ & $\nu_{H_2,3}$ & $0$ & $0$ & $1$ & $0$ \\ 
+$\nu_{CH_4,4}$ & $\nu_{H_2O,4}$ & $\nu_{H_2,4}$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+\end{tabular}
+\end{table}
+Eine spezielle Lösung wäre z.B. 
+\[ \chemie{CH_4} + \chemie{H_2O} \chemie{EQUILIBRIUM} 3\chemie{H_2} + \chemie{CO} \]
+weitere spezielle Lösungen ergeben die Matrix:
+\begin{table}[H]
+\begin{tabular}{|ccc|cccc|} \hline
+$\nu_{CH_4}$ & $\nu_{H_2O}$ & $\nu_{H_2}$ & $\nu_{CO}$ & $\nu_{CO_2}$ & $\nu_C$ & $\nu_{C_2H6}$ \\ \hline
+$-1$ & $-1$ & $3$ & $1$ & $0$ & $0$ & $0$ \\ 
+$-1$ & $-2$ & $4$ & $0$ & $1$ & $0$ & $0$ \\ 
+$-1$ & $0$ & $2$ & $0$ & $0$ & $1$ & $0$ \\ 
+$-2$ & $0$ & $1$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+\end{tabular}
+\end{table}
+Diese Gleichungen stellen die Schlüsselreaktionen dar.
 
+\subsubsection{Aus einem Satz bekannter Reaktionen}
+In der Praxis ist oftmals bekannt, welche Teil-Reaktionen ablaufen.
+Somit kann über den {\sc Gauss}-Algorithmus gelöst werden.
+Beim o.g. Beispiel:
+\begin{table}[H]
+\begin{tabular}{|l|ccccccc|} \hline
+$i \rightarrow$    & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+Spez $\rightarrow$ & $CH_4$ & $H_2O$ & $H_2$ & $CO$ & $CO_2$ & $C$ & $C_2H_6$ \\ \hline
+1 & -1 & -1 & 3 & 1 & 0 & 0 & 0 \\
+2 & 0 & -1 & 1 & -1 & 1 & 0 & 0 \\
+3 & -1 &0 &2 &0 &0 &1 &0 \\
+4 & 0 &-1 &1 &1 &0 &-1& 0 \\
+5 & 0 &0 &0 &-2 &1 &1 &0 \\
+6 & -2 &0& 1 &0 &0 &0 &1 \\ \hline
+\end{tabular}
+\end{table}
+Wird zu:
+\begin{table}[H]
+\begin{tabular}{|l|ccccccc|} \hline
+$i \rightarrow$    & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+Spez $\rightarrow$ & $CH_4$ & $H_2O$ & $H_2$ & $CO$ & $CO_2$ & $C$ & $C_2H_6$ \\ \hline
+1 & -1 & -1 & 3 & 1 & 0 & 0 & 0 \\
+2 & 0 & -1 & 1 & -1 & 1 & 0 & 0 \\
+3 & 0 &0 &-3 &-4 &2 &0 &1 \\
+4 & 0 &0 &0 &-2 &1 &1& 0 \\
+5 & 0 &0 &0 &0 &0 &0 &0 \\
+6 & 0 &0& 0 &0 &0 &0 &0 \\ \hline
+\end{tabular}
+\end{table}
+Hier sind die Schlüsselreaktionen direkt ersichtlich.
 
+\subsection{Beziehungen zwischen Stöchiometrie und Reaktionskinetik}
+Um sinnvolle Erkenntnisse aus den Berechnungen zu erhalten, welche den Reaktionsverlauf oder Reaktionsmechanismus beschreibt, ist eine Bewertung notwendig.
+
+\begin{enumerate}
+\item $M = R_{\nu} = N - R_{\beta}$ - Anzahl der wirklichen Reaktionen entspricht der Anzahl der Schlüsselreaktionen.\\
+  Bsp. 3 Isomere, 1 Schlüsselreaktion
+  \begin{itemize}
+     \item Parallelreaktion ($A_1 \rightarrow A_2$ und $A_1 \rightarrow A_3$)
+     \item Folgereaktion ($A_1 \rightarrow A_2 \rightarrow A_3$)
+  \end{itemize}
+  Entscheidung durch Konzentrationsmessung von $A_3$ an $t=0$. Wenn $\frac{dc_3}{dt}=0$, dann 2.
+\item $M > R_{\nu} = N - R_{\beta}$ - Mehr ablaufende Reaktionen als Schlüsselreaktionen
+\item $M < R_{\nu} = N - R_{\beta}$ - Eine oder mehrere Schlüsselreaktionen sind kinetisch unmöglich.\\
+  Bsp. Rohrzuckerinversion.
+\end{enumerate}
