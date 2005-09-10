@@ -93,3 +93,44 @@ $\Phi<0,3$: Reaktion 2. Ordnung\\
 $\rightarrow$ Pellet nicht isotherem, ausschließlich Porendiffusion\\
 Keine Massen- und Wärmelimitierung falls $\Phi\cdot \exp{\left(\frac{\gamma\cdot\beta_{Pr}}{1+\beta_{Pr}}\right)}<1$
 
+\subsection{Zweifilm-Theorie}
+\subsubsection{Basis}
+\begin{itemize}
+\item Stagnierende Filme
+\item Konzentrationsgradienten
+\item Gleichgewicht an Phasengrenzfläche ($\mu^G = \mu^L$)
+\item Diffusion bewirkt Transport durch Grenzfläche
+\end{itemize}
+
+\[ \fbox{$ \displaystyle J_{i,g} = - D_{i,g} \frac{\Delta c_{i,g}}{\delta_g} = J_{i,l} = - D_{i,l} \frac{\Delta c_{i,l}}{\delta_l} $} \]
+Treibende Kraft: Chemisches Potential bzw. $\Delta c_i = c_i^* - c_i$!
+
+Stoffübergangskoeffizienten:
+\[ K = \frac{D_i,P}{\delta_P} \]
+
+{\sc Henry} Gesetz (verdünnte Lösung Gas in Flüssigkeit:
+\[ p_i^* = H_i c_i^* \]
+
+{\sc Nernst}'sches Gesetz (Liquid/Liquid)
+\[ c_{i,I}^* = K_{N} c_{i,II}^* \]
+
+\subsubsection{Bilanz}
+Acc = In - Out + React\\
+stationär: Acc = 0 \\
+\[ (J_1 a)_{y} + (J_1 a)_{y +dy} = k' c_1 c_2 a dy \]
+\[ J_1 = -D_{1,l} \left.\frac{dc}{dy}\right|_{y} \qquad \left. \frac{dc_1}{dy} \right|_{y+dy} = \frac{dc_1}{dy} + \frac{dc^2}{dy}dy \]
+\[ \rightarrow D_{1,l} \frac{d^2c_1}{dy^2} = k c_1 c_2 \qquad D_{2,l} = \frac{d^2c_2}{dy^2} = k c_1 c_2 \]
+Vereinfachungen:
+\[ p_1^* = p_{1,g} \qquad c_1^* = \frac{p_{1,g}}{H_1} \qquad k = k' c_2 \]
+\[ y = 0: \qquad c_1=c_1^* \qquad c_2=c_{2,l} \]
+\[ y = \delta_l: \qquad c_1 = c_{1,l} \qquad c_2 = c_{2,l} \]
+\[ \fbox{$ \displaystyle d_{1,l} \frac{d^2c_2}{dy^2} = k c_1 $} \]
+Mit der dimensionslosen Größe {\sc Ha}:
+\[ Ha = \delta_l \sqrt{\frac{k}{D_{1,l}}} = \frac{\delta_l}{D_{1,l}} \sqrt{k D_{1,l}} = \frac{1}{k_{1,l}} \sqrt{k D_{1,l}} \]
+
+\subsubsection{Chemische Reaktion und Stofftransport}
+\begin{enumerate}
+\item Chemische Reaktion im Bulk
+\item Stofftransport durch Flüssigkeitsfilm ist langsamer als Reaktion $\rightarrow$ Reaktion im Film
+\end{enumerate}
+

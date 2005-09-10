@@ -5,12 +5,52 @@
 \[ K = \frac{c_2^*}{c_1^*} = \frac{c_{10} - c_1^*}{c_1^*} \]
 $^*$ bedeutet: Gleichgewichtskonzentration
 \[ \ln \frac{c_1 - c_1^*}{c_{10} - c_1^*} = - (k_1+k_2)t \]
-{\bf Hier Bild  Konzentrationsverlauf}
+\begin{figure}[H]
+\beginpicture
+\setcoordinatesystem units <3cm,3cm>
+\setplotarea x from 0 to 2, y from 0 to 1
+\axis bottom /
+\axis left ticks unlabeled at 0 1 / /
+\axis right ticks unlabeled at 0.25 0.75 / /
+\put {$t$} at 2.05 -0.02
+\put {$c_{1,0}$} at -0.15 1
+\put {$c_{2,0}$} at -0.15 0
+\put {$c_1^*$} at 2.12 0.25
+\put {$c_2^*$} at 2.12 0.75
+\linethickness 1pt
+\setquadratic
+\setsolid
+\plot 0 1 0.5 0.5 2 0.25 /
+\setdots <1pt>
+\plot 0 0 0.5 0.5 2 0.75 /
+\endpicture
+\end{figure}
 
 \subsection{Parallelreaktion}
 \[ \chemie{A_1} \chemie{GIVES}{k_1} \chemie{A_2} \hbox{gleichzeitig}  \chemie{A_1} \chemie{GIVES}{k_2} \chemie{A_3} \]
 \[ \frac{dc_1}{dt} = - (k_1 + k_2) c_1 \quad \leadsto \quad \frac{c_1}{c_{10}} = \exp\left[-(k_1+k_2)t\right] \]
-{\bf Hier Bild  Konzentrationsverlauf}
+\begin{figure}[H]
+\beginpicture
+\setcoordinatesystem units <3cm,3cm>
+\setplotarea x from 0 to 2, y from 0 to 1
+\axis bottom /
+\axis left ticks unlabeled at 0 1 / /
+\axis right /
+\put {$t$} at 2.05 -0.02
+\put {$c_{1,0}$} at -0.15 1
+\put {$c_1$} at 2.12 0.1
+\put {$c_2$} at 2.12 0.6
+\put {$c_3$} at 2.12 0.35
+\linethickness 1pt
+\setquadratic
+\setsolid
+\plot 0 1 0.8 0.3 2 0.1 /
+\setdots <1pt>
+\plot 0 0 0.8 0.4 2 0.6 /
+\setdashes <2pt>
+\plot 0 0 0.8 0.2 2 0.35 /
+\endpicture
+\end{figure}
 Hier auch wichtig: Globale Selektivität \[ S = \frac{c_2 - c_{20}}{c_3 - c_{30}} = \frac{k_1}{k_2} \]
 
 \subsection{Folgereaktionen}
@@ -26,8 +66,93 @@ Daraus folgt: \fbox{$ \displaystyle \frac{dc_2}{dt} \approx 0$}
 \subsubsection{Konzentrationsverläufe}
 \begin{enumerate}
 \item $k_1 = k_2$
+\begin{figure}[H]
+\beginpicture
+\setcoordinatesystem units <3cm,3cm>
+\setplotarea x from 0 to 2, y from 0 to 1
+\axis bottom ticks numbered from 0 to 2 by 0.5 /
+\axis left ticks numbered from 0 to 1 by 0.5 /
+\axis top /
+\axis right /
+\put {$\frac{t}{t_{0,5}}$} at 2.2 -0.1
+\linethickness 0.1pt
+\setdots <2pt>
+\putrule from 0 0.5 to 2 0.5
+\putrule from 0.5 0 to 0.5 1
+\putrule from 1 0 to 1 1
+\putrule from 1.5 0 to 1.5 1
+\putrule from 2 0 to 2 1
+\linethickness 1pt
+\setquadratic
+\setsolid
+\plot 0 1.00 0.5 0.45 2 0.02 /
+\setdots <1pt>
+\plot 0 0 0.6 0.4 2 0.15 /
+\setdashes <2pt>
+\plot 0 0 1 0.5 2 0.8 /
+\endpicture
+\end{figure}
 \item $k_1 = 20 k_2 \qquad k_1 \gg k_2$
+\begin{figure}[H]
+\beginpicture
+\setcoordinatesystem units <3cm,3cm>
+\setplotarea x from 0 to 2, y from 0 to 1
+\axis bottom ticks numbered from 0 to 2 by 0.5 /
+\axis left ticks numbered from 0 to 1 by 0.5 /
+\axis top /
+\axis right /
+\put {$\frac{t}{t_{0,5}}$} at 2.2 -0.1
+\linethickness 0.1pt
+\setdots <2pt>
+\putrule from 0 0.5 to 2 0.5
+\putrule from 0.5 0 to 0.5 1
+\putrule from 1 0 to 1 1
+\putrule from 1.5 0 to 1.5 1
+\putrule from 2 0 to 2 1
+\linethickness 1pt
+\setquadratic
+\setsolid
+\plot 0 1.00 0.2 0.25 0.5 0 /
+\setdots <1pt>
+\plot 0 0 0.08 0.5 0.25 0.75 /
+\plot 0.25 0.75 0.3 0.77 0.4 0.75 /
+\plot 0.4 0.75 1 0.5 2 0.25 /
+\setdashes <2pt>
+\plot 0.1 0  1 0.5  2 0.75 /
+\endpicture
+\end{figure}
+
 \item $20 k_1 = k_2 \qquad k_1 \ll k_2$
+\begin{figure}[H]
+\beginpicture
+\setcoordinatesystem units <3cm,3cm>
+\setplotarea x from 0 to 2, y from 0 to 1
+\axis bottom ticks numbered from 0 to 2 by 0.5 /
+\axis left ticks numbered from 0 to 1 by 0.5 /
+\axis top /
+\axis right /
+\put {$\frac{t}{t_{0,5}}$} at 2.2 -0.1
+\linethickness 0.1pt
+\setdots <2pt>
+\putrule from 0 0.5 to 2 0.5
+\putrule from 0.5 0 to 0.5 1
+\putrule from 1 0 to 1 1
+\putrule from 1.5 0 to 1.5 1
+\putrule from 2 0 to 2 1
+
+\linethickness 1pt
+\setquadratic
+\setsolid
+\plot 0 1.00 0.5 0.45 2 0.02 /
+\setdots <1pt>
+\setlinear
+\plot 0 0  0.1 0.05  1 0.03  1.5 0.02  2 0.02 /
+\setquadratic
+\setdashes <2pt>
+\plot 0 0 1 0.5 2 0.8 /
+\endpicture
+\end{figure}
+
 \end{enumerate}
 \subsubsection{Anwendung des {\sc Bodenstein}-Prinzips}
 \[ \frac{dc_2}{dt} = k_1c_1 - k_2 c_2 \approx 0 \quad \leadsto k_1 c_1 = k_2 c_2 \]

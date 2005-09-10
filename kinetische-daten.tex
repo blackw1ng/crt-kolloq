@@ -1,0 +1,71 @@
+\section{Auswertung kinetischer Daten}
+\subsection{Scale-Up}
+Problem beim Scale-Up von der Laboranlage zur großtechnischen Anlage sind:
+\begin{itemize}
+\item Form des Reaktors
+\item Wärmezu- und abfuhr
+\item Strömungsbedingungen
+\item Vermischungsverhalten
+\end{itemize}
+Als Methoden für den Scale-Up ergeben sich:
+\begin{table}[H]
+\begin{tabular}{c|c} \hline
+\bf klassisch	& \bf modern \\ \hline
+emprische Betrachtung & Detailverständnis + Modellbildung \\
+stufenweiser Scale-U & in einem Schritt \\
+kostenintensiv & interdisziplinär \\
+Grundoperationen & Prozessdenken \\
+\end{tabular}
+\end{table}
+
+\subsection{Ziel kinetischer Messungen}
+Mikrokinetik
+\begin{itemize}
+\item nicht Transporlimitiert
+\item Beschreibung durch intrinsische Kinetik oder Kenntnis des Mechanismus
+\item Formalkinetisch vereinfachende Annahmen
+\end{itemize}
+Makrokinetik
+\begin{itemize}
+\item Effektivkinetik mit Transporteinfluss
+\item nicht getrennt von Transport
+\item Beschreibung durch Scale-down 
+\end{itemize}
+
+\subsection{Prinzipien von Betriebsweise und Bauart}
+Ist der Reaktor
+\begin{itemize}
+\item komplex oder einfach?
+\item isotherm, adiabat oder polytrop?
+\item Homogen oder Heterogen?
+\end{itemize}
+Lösung: Bestimmung von Konzentrationen in Abhängigkeit von der Zeit ($c= f(\tau)$ bzw $c = f(t_R)$)!\\
+BSTR: Zeitkonstante = $t_R$\\
+PFTR: Zeitkonstante = $\tau$
+
+\subsubsection{Differentialreaktoren}
+Bei Differentialreaktoren kan bei kleinen Umsätzen die Reaktionsgeschwindigkeit direkt bestimmt werden:
+\[ \nu_{i} r = \frac{c_{i0}-(c_{i0}-dc_i)}{dt} = - c_{i0} \frac{dX_i}{dt} \]
+In der Praxis ist allerdings $\frac{dX_i}{dt}$ schwer bestimmtbar. Damit ist das Ergebnis einem $T$ bzw. $c$ nicht mehr genau zuzuordnen!
+
+\subsubsection{Schlaufenreaktor}
+Ein idealer CSTR verhält sich wie ein Schlaufenreaktor - Also großer Recycle Strom, gradientenlos.\\
+Die Stoffmengenänderungsgeschwindigkeit ergibt sich zu:
+\[ R_i = - \frac{\dot{n}_{i0} - \dot{n}_i}{V} \qquad R_k = \frac{N_{k0}dX_k}{m_{cat}} \]
+
+\subsection{Beispiele für spezielle Rohrreaktoren}
+\subsubsection{Heterogen Katalysierte Reaktionen}
+Hier wählt man meist
+\begin{itemize}
+\item Rohrreaktor mit Füllung $\rightarrow$ Festbettreaktor
+\item Schlaufenreaktor mit innerem und äußerem Kreislauf
+\end{itemize}
+\[ r = \frac{1}{\nu_i} \frac{dn}{dt} \frac{1}{m_{kat}} \]
+
+\subsubsection{Fluid-Fluid-Reaktoren}
+Hier ist der Stofftransport von sehr großer Bedeutung!
+\begin{enumerate}
+\item Mikrokinetik oder Transportlimitierung bestimmen
+\item Bestimmung der Makrokinetik in Reaktor mit bekannter Fluiddynamik und Austauschfläche
+\end{enumerate}
+
