@@ -24,8 +24,8 @@ Annahmen:
 \item kugelförmiges Katalysatorpartikel
 \item Katalysatorpartikel ist pseudo-homogenes System
 \end{itemize}
-1. {\sc Fick}'sches Gesetz: \[ \fbox{$j=D_e\frac{dc}{dx}$} \]
-effektiver Diffusionskoeffizient: \[ \fbox{$D_e=\frac{D\cdot \varepsilon}{\tau}$} \]
+1. {\sc Fick}'sches Gesetz: \[ \fbox{$ \displaystylej=D_e\frac{dc}{dx}$} \]
+effektiver Diffusionskoeffizient: \[ \fbox{$ \displaystyleD_e=\frac{D\cdot \varepsilon}{\tau}$} \]
 $\tau$: Tortuisität ("Labyrinth-Faktor")\\
 $\varepsilon_p$: Porosität\\
 {\sc Bruggemann}-Gleichung: $\tau=\frac{1}{\sqrt{\varepsilon_p}}$\\
@@ -34,12 +34,12 @@ Massenbilanz:\\
 \[ \mbox{(Diff.-fluss)}_{x'+dx}-\mbox{(Diff.-fluss)}_{x'}=\mbox{Verbr. d. Rkt. im Vol.-element} \]
 \[ j_{x'+dx}-j_{x'}=\underbrace{\Gamma}_{\mbox{Quelle/Senke}} \]
 Nach Vereinfachung:
-\[ \fbox{$\frac{d^2c}{dx'^2}+\frac{2}{x'}\frac{dc}{dx'}=\frac{kc^n}{D_e}$} \]
+\[ \fbox{$ \displaystyle\frac{d^2c}{dx'^2}+\frac{2}{x'}\frac{dc}{dx'}=\frac{kc^n}{D_e}$} \]
 Randbedingungen:\\
 $x'=R \qquad \rightarrow \qquad c=c_s$\\
 $x'=0 \qquad \rightarrow \qquad \frac{dc}{dx'}=0$\\
 {\sc Thiele}-Modul:\\
-\[ \fbox{$\phi=R\cdot \sqrt{\frac{k\cdot c_s^{n-10}}{D_e}}=\sqrt{DaII}=\frac{\mbox{Reaktion}}{\mbox{Diffusion}}$} \]
+\[ \fbox{$ \displaystyle\phi=R\cdot \sqrt{\frac{k\cdot c_s^{n-10}}{D_e}}=\sqrt{DaII}=\frac{\mbox{Reaktion}}{\mbox{Diffusion}}$} \]
 $DaII$: {\sc Damköhler}-Zahl 2. Ordnung\\
 $\phi$ klein: niedrige Reaktionsgeschwindigkeit; Reaktion limitiert Gesamtgeschwindigkeit\\
 $\phi$ groß: hohe Reaktionsgeschwindigkeit; Diffusion limitiert Gesamtgeschwindigkeit\\
@@ -63,25 +63,25 @@ Ammoniakoxidation:\\
 Kontaktzeit: $1/1000\,s$ (!)\\
 laminare Filmdicke: $\delta=f\left(u,\rho,\nu,d_p\right)$\\
 Filmtheorie (1. {\sc Fick}'sches Gesetz):\\
-\[ \fbox{$J=-D\frac{dc}{dx}=\underbrace{\frac{D}{\delta}}_{\beta}\cdot\left(c_b-c_s\right)$} \]
+\[ \fbox{$ \displaystyleJ=-D\frac{dc}{dx}=\underbrace{\frac{D}{\delta}}_{\beta}\cdot\left(c_b-c_s\right)$} \]
 $\beta=f\left(u,\rho,\nu,d_p,D\right)$: Massentransportkoeffizient $\left[\frac{m}{s}\right]$\\
 {\sc Biot}-Zahl:\\
-\[ \fbox{$Bi_m=\frac{\beta\cdot R}{D_e}=\frac{\mbox{Massentransport}}{\mbox{Porendiffusion}}$} \]
+\[ \fbox{$ \displaystyleBi_m=\frac{\beta\cdot R}{D_e}=\frac{\mbox{Massentransport}}{\mbox{Porendiffusion}}$} \]
 übliche Größenordnung: $Bi_m=100...200$\\
 für $Bi_m>100\rightarrow$ Filmdiffusion ist vernachlässigbar\\
 \[ \eta=f\left(\underbrace{Bi_m}_{Filmdiffusion};\,\underbrace{\Phi}_{Porendiffusion}\right) \]
 \subsection{Einfluss von Wärme- und Massentransport}
 {\sc Prater}-Zahl:
-\[ \fbox{$\beta_{Pr}=\frac{c_b\cdot D_e\cdot\left(-\Delta H_R\right)}{\lambda_e\cdot T_b}=\frac{\mbox{max. $\Delta T$ im Pellet}}{\mbox{Bulk-Temperatur}}=\frac{\Delta T_{max}}{T_b}$} \]
+\[ \fbox{$ \displaystyle\beta_{Pr}=\frac{c_b\cdot D_e\cdot\left(-\Delta H_R\right)}{\lambda_e\cdot T_b}=\frac{\mbox{max. $\Delta T$ im Pellet}}{\mbox{Bulk-Temperatur}}=\frac{\Delta T_{max}}{T_b}$} \]
 $\beta_{Pr}>0$: exotherme Reaktion\\
 $\beta_{Pr}<0$: endotherme Reaktion\\
 %was hat es mit \eta>1 auf sich?
 {\sc Arrhenius}-Zahl (Einfluss der Temperatur auf die Reaktion):\\
-\[ \fbox{$\gamma=\frac{E_A}{RT_b}$} \]
+\[ \fbox{$ \displaystyle\gamma=\frac{E_A}{RT_b}$} \]
 Keine Transporthemmung (willkürliche Festlegung):\\
 $\eta=\frac{r_{obs}}{r\left(T_b,\,c_b\right)}=1\pm 0,05$\\
 {\sc Weisz-Prater}-Kriterium:\\
-\[ \fbox{$\Phi=\frac{r_{obs}\cdot R^2}{c_s\cdot D_e}$} \]
+\[ \fbox{$ \displaystyle\Phi=\frac{r_{obs}\cdot R^2}{c_s\cdot D_e}$} \]
 $\Phi$: {\sc Weisz}-Modul\\
 $\Phi=\phi^2\cdot \eta$\\
 Keine Limitierung durch Porendiffusion, wenn:\\
