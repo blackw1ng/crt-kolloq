@@ -1,4 +1,4 @@
-\documentclass[9pt,a4paper,twocolumn,fleqn,german]{scrartcl}
+\documentclass[9pt,a4paper,fleqn,german]{scrartcl}
 
 % enc
 \usepackage[T1]{fontenc}
@@ -68,12 +68,12 @@ pdfproducer = {LaTeX}
 \begin{document}
 
 %zweispaltig mit überschrift zentriert
-%\twocolumn[{\csname @twocolumnfalse\endcsname
-{\centerline{ \Huge CRT Formelsammlung}}
-{\centerline{ \it Florian Enzenberger, Friedrich Glenk, }}
-{\centerline{ \it Daniel Ludwig, Matthias Pemsel \& Sebastian Werner, 2005 } }
+\twocolumn[{\csname @twocolumnfalse\endcsname
+{\centerline{ \Huge \sc Formelsammlung Chemische Reaktionstechnik I}}
+{\centerline{ \it Florian Enzenberger, Friedrich Glenk, Daniel Ludwig, Matthias Pemsel \& Sebastian Werner, 2005 } }
 {\centerline{ \bf Keinerlei Anspruch auf Vollständigkeit oder Richtigkeit! }}
-%}]
+\vspace{1ex}
+}]
 
 \input{basiswissen}
 \input{einfache-reaktionen}
@@ -86,4 +86,5 @@ pdfproducer = {LaTeX}
 \input{deaktivierung}
 \input{makrokinetik}
 \input{kinetische-daten}
+\input{reaktoren}
 \end{document}
