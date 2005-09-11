@@ -2,7 +2,7 @@
 \begin{itemize}
 \item {\sc Langmuir-Hinshelwood}:
 \begin{table}[H]
-{\small \setlength{\tabcolsep}{0.3mm}
+{\small \setlength{\tabcolsep}{0.8mm}
 \begin{tabular}{cccccccccccccccccccccccc}
 A& & &B& & &A&B& & & &\multicolumn{2}{c}{A$\cdots$B}& & & &\multicolumn{2}{c}{C$\cdots$D}& & &C& & &D\\
  &$\searrow$&$\swarrow$& &$\rightarrow$& &|&|& &$\rightarrow$& &|&|& &$\rightarrow$& &|&|& &$\rightarrow$& &$\nwarrow$&$\nearrow$& \\
@@ -13,7 +13,7 @@ $\circ$&$\circ$&$\circ$&$\circ$& &$\circ$&$\circ$&$\circ$&$\circ$& &$\circ$&$\ci
 
 \item {\sc Elay-Rideal}:
 \begin{table}[H]
-{\small \setlength{\tabcolsep}{0.3mm}
+{\small \setlength{\tabcolsep}{0.8mm}
 \begin{tabular}{cccccccccccccccccccccccc}
 A& & &B& & &A&$\leftarrow$&B& & &\multicolumn{2}{c}{A$\cdots$B}& & & &\multicolumn{2}{c}{C$\cdots$D}& & &C& & &D\\
  &$\searrow$& & &$\rightarrow$& &|& & &$\rightarrow$& &|& & &$\rightarrow$& &|& & &$\rightarrow$& &$\nwarrow$& & \\
@@ -27,7 +27,7 @@ $\rightarrow$ Prinzip des Geschwindigkeit bestimmenden Schrittes (RDS)
 Bsp.: {\sc Langmuir-Hinshelwood}:
  \[ |\nu_1|\chemie{A_1} \chemie{PLUS} |\nu_2|\chemie{A_2} \chemie{EQUILIBRIUM} |\nu_3|\chemie{A_3} \chemie{PLUS} |\nu_4|\chemie{A_4}\]
 mit $\nu_1=\nu_2=-1$; $\nu_2=\nu_4=1$\\
-Annahme macht Sinn, da Oberfläche meist bimolekular.
+Annahme macht Sinn, da Oberflächenreaktion maximal bimolekular sind.
 \begin{itemize}
 \item jeder Reaktand ist an einem Zentrum adsorbiert; Reaktion im adsorbierten Zustand
 \item jedes Produkt an einem Zentrum
@@ -65,6 +65,22 @@ mit $r_{Sor,Edukt} = r_{Sor,Produkt}=0$
 \[ r=k_{ads,3}p_3\Theta_0-k_{des_3}\Theta_3 \]
 \end{itemize}
 Allgemeine Sorptionsisotherme für {\sc Langmuir}-{\sc Hinshelwood} - Mechanismus:
- \[ \fbox{$ \displaystyle \Theta_i=\frac{K_ip_i}{1+\sum_{q=1}^{N}K_qp_q}\qquad$ mit $\qquad K_i=\frac{k_{ads,i}}{k_{des,i}}$ } \] 
+ \[ \fbox{$ \displaystyle \Theta_i=\frac{K_ip_i}{1+\sum_{q=1}^{N}K_qp_q}$}$\qquad$ mit $\qquad K_i=\frac{k_{ads,i}}{k_{des,i}}$  \] 
 
+\subsection{Deaktivierung heterogener Katalysatoren}
+$\rightarrow$ Änderung der Aktivität $a(t')$ und Selektivität mit der Zeit
+ \[ a(t')=\frac{r(t')}{r(t'=0)} \]
+Mechanismen der Deaktivierung:
+\begin{itemize}
+\item Vergiftung ($H_2S$)
+\item Ablagerungen (Verkokung, Teer)
+\item Versinterung (Cluster backen zusammen $\rightarrow$ Verringerung der aktiven Oberfläche)
+\item Austrag über die Gasphase ("Mondprozess")
+\end{itemize}
+Deaktivierungsgeschwindigkeit: $r_d=\frac{da}{dt'}=\frac{dL}{dt'}$
+\begin{itemize}
+\item Temperatur
+\item Konzentration deaktivierender Substanzen
+\item Aktivität selbst
+\end{itemize}
 
