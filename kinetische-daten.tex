@@ -9,7 +9,7 @@ Problem beim Scale-Up von der Laboranlage zur großtechnischen Anlage sind:
 \end{itemize}
 Als Methoden für den Scale-Up ergeben sich:
 \begin{table}[H]
-\begin{tabular}{c|c} \hline
+\begin{tabular}{c|c} 
 \bf klassisch	& \bf modern \\ \hline
 emprische Betrachtung & Detailverständnis + Modellbildung \\
 stufenweiser Scale-U & in einem Schritt \\
@@ -64,8 +64,42 @@ Hier wählt man meist
 
 \subsubsection{Fluid-Fluid-Reaktoren}
 Hier ist der Stofftransport von sehr großer Bedeutung!
-\begin{enumerate}
+\begin{itemize}
 \item Mikrokinetik oder Transportlimitierung bestimmen
 \item Bestimmung der Makrokinetik in Reaktor mit bekannter Fluiddynamik und Austauschfläche
+\end{itemize}
+\begin{enumerate}
+\item Laminarer Fallfilmabsorber\\
+Es werden Ausgangs und Ausgangskonzentrationen gemessen. Sehr interessant, wegen definierter Verweilzeit und Phasengrenzfläche.\\
+Besonders gut geeignet bei schnellen Reaktionen (sehr große {\sc Ha}-Zahl!)
+\item Laminarstrahlabsorber \\
+Durch die wechselnden Strömungsprofile ist die Verweilzeit berechenbar durch
+\[ \tau = \frac{\pi d^2 L}{4 \dot{V}_l} \]
 \end{enumerate}
 
+\subsection{Methoden der Auswertung}
+Aufstellen eines Modell, wobei dessen Parameter bestimmt werden müssen.
+\begin{enumerate}
+\item Kinetische Modellrechnung
+\[ \begin{array}{r} r \\ X \\ ... \end{array} = f\left( \begin{array}{l} c_i \\ p_i \\ T \\ m_{cat} \\ ... \end{array} \right) \]
+\item Parameterabschätzung
+\item Struktur des Reaktionsschemas ermitteln (bei komplexen Reaktionen)
+\end{enumerate}
+In der Vergangenheit dominierten eher graphische Methoden, heute sind es eher statistische.
+
+\subsection{Differentialmethode}
+Reaktionsrate wird aus $c-t$-Plot mit Hilfe graphischer oder numerischer Differentiation ermittelt.
+Vorteil ist die generelle Anwendbarkeit und der geringe Aufwand der Berechnung.  Demgegenüber steht der Nachteil, dass die Reaktionsrate sehr schwer messbar ist und dass die Differentation prinzipbedingt einen gewissen Fehler aufweist.
+
+\subsubsection{bei Potenzansätzen}
+\[ \fbox{$ \displaystyle r = k c_i^m $} \quad \rightarrow \quad \fbox{$ \displaystyle \ln r = ln k + m \ln c_i $}\]
+Graphische Auftragung $\ln r$-$c_i$. Achsenabschnitt: $k$, Steigung $m$.
+
+\subsubsection{bei hyperbolischen Ansätzen}
+\[ \fbox{$ \displaystyle r = \frac{k p_i}{1 + K p_i} $} \quad \rightarrow \quad r + K p_i r = k p_i \]
+\[ \frac{1}{k} + \frac{K}{k}p_i = \frac{p_i}{r} \quad \rightarrow \quad \fbox{$ \displaystyle \frac{p_i}{r} = \frac{K}{k} p_i + \frac{1}{R} $} \]
+Graphische Auftragung $\frac{p_i}{r}$-$p_i$. Achsenabschnitt: $\frac{1}{k}$, Steigung: $\frac{K}{k}$.
+
+\subsection{Integralmethode}
+\[ \fbox{$ \displaystyle \frac{dc}{dt} = - k c^m $}\quad \rightarrow \quad \begin{array}{l@{\quad}r@{\,=\,}l} m = 1 & \ln c - \ln c_0 & -kt \\ m \ne 1 & \frac{1}{c^{m-1}}-\frac{1}{c_0^{m-1}} & (m-1) kt \end{array} \]
+Wichtig hierbei: Parameter $m$ wird angepasst, bis sich eine Gerade ergibt!
