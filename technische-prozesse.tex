@@ -1,4 +1,4 @@
-\section{Wichtige Großtechn. Prozesse}
+\section{Wichtige Großtechnische Prozesse}
 \subsection{Schwefelsäureherstellung}
 \begin{enumerate}
 \item Verbrennung von Schwefel zu $SO_2$
@@ -6,29 +6,169 @@
 \item $SO_3$-Absorption an Wasser $\quad \chemie{SO_3} \chemie{PLUS} \chemie{H_2O} \chemie{GIVES} \chemie{H_2SO_4} \qquad \Delta H_R = - 132,5 \frac{kJ}{mol} $
 \end{enumerate}
 
-\subsection{Ammoniakherstellung}
-Der aufwändigste Teil ist hierbei die bereitstellung des Synthesegases!
-Dieses wird in mehreren Schritten ausgehend von Methan hergestellt:
-\begin{enumerate}
-\item Steam-Reforming
-\[ \chemie{CH_4} + \chemie{H_2O} \chemie{EQUILIBRIUM} \chemie{CO} + \chemie{3 H_2} \qquad \Delta H_R = 206 \frac{kJ}{mol} \]
-Stark endotherm. Durchführung in Radiation-Convection-Öfen. Ni-Katalysiert.
-\item Luftzugabe - Autothermal-Reforming:
-\[ \chemie{H_2} + \chemie{O_2}_{Luft} \chemie{EQUILIBRIUM} \chemie{H_2O} \]
-Wird gemacht um das $N_2$ dazu zu bekommen.
-\item Wasser-Gas-Shift
-\[ \chemie{CO} + \chemie{H_2O} \chemie{EQUILIBRIUM} \chemie{CO_2} + \chemie{H_2} \qquad \Delta H_R = -41 \frac{kJ}{mol} \]
-Wichtig: Genaue Wasserzugabe und niedrige Temperatur. Praktisch: 2 Reaktoren (High+Low Temp=
-\item Entfernung von $CO_2$ durch {\sc Rectisol}-Absorptionsverfahren
-\item Methanisierung
-\[ \chemie{CO} + \chemie{3 H_2} \chemie{EQUILIBRIUM} \chemie{CH_4} + \chemie{H_2O} \qquad \Delta H_R = - 206 \frac{kJ}{mol} \]
-Hoch Exotherm. 620K bei 30bar. Macht man um das Kat-Gift. $CO$ in ppm-Bereich abzusenken.
-\item Ammoniaksynthese
-\[ \chemie{N_2} \chemie{PLUS} \chemie{H_2} \chemie{EQUILIBRIUM} \chemie{2 NH_3} \qquad \Delta H_R = - 91 \frac{kJ}{mol} \]
-Optimierungsproblem zwischen Temperatur (hoch: wenig $NH_3$, niedrig: zu langsam) und Druck ($100-300 bar$).
-Wegen Exothermie: Zwischenkühlung! 
-\end{enumerate}
-
 \subsection{Methanolherstellung}
 \[ \chemie{CO} \chemie{PLUS} \chemie{H_2} \chemie{EQUILIBRIUM} \chemie{CH_3OH} \qquad \Delta H_R = - 92 \frac{kJ}{mol} \]
+
+\subsection{Ammoniakherstellung}
+Der aufwändigste Teil ist hierbei die Bereitstellung des Synthesegases!
+Dieses wird in mehreren Schritten ausgehend von Methan hergestellt:
+\subsubsection{Steam-Reforming}
+\[ \chemie{CH_4} + \chemie{H_2O} \chemie{EQUILIBRIUM} \chemie{CO} + \chemie{3 H_2} \qquad \Delta H_R = 206 \frac{kJ}{mol} \]
+Stark endothermer Prozess, welcher im Radiation-Convection-Oven durchgeführt wird.
+
+\subsubsection{Luftzugabe - Autothermal-Reforming}
+\[ \chemie{H_2} + \chemie{O_2}_{Luft} \chemie{EQUILIBRIUM} \chemie{H_2O} \]
+Dient ihn Stand-Alone-Anlagen dazu, den Stickstoff bereitzustellen. Der Sauerstoff wird in einer Knallgasreaktion verbraucht.
+Die ebenfalls anwesenden Edelgase sind inert. In integrierten Anlagen mit Luftzerleger wird oftmals direkt $N_2$ zugegeben.
+
+\subsubsection{Wasser-Gas-Shift}
+\[ \chemie{CO} + \chemie{H_2O} \chemie{EQUILIBRIUM} \chemie{CO_2} + \chemie{H_2} \qquad \Delta H_R = -41 \frac{kJ}{mol} \]
+Hier ist zur Verschiebung des Gleichgewichts eine übermässige Zugabe von Wasser notwendig. Da die Reaktion leicht exotherm ist,
+muss die Temperatur niedrig gehalten werden. Technisch wird meist ein High-Temp und ein Low-Temp Reaktor mit intermediärer Kühlung realisiert.
+
+\subsubsection{Entfernung von $CO_2$}
+Das entstandene $CO_2$ wird durch das {\sc Rectisol}-Absorptionsverfahren (Methanol als Absorpt bei sehr niedrigen Temperaturen $-75 °C$ und $25 bar$).
+
+\subsubsection{Methanisierung}
+\[ \chemie{CO} + \chemie{3 H_2} \chemie{EQUILIBRIUM} \chemie{CH_4} + \chemie{H_2O} \qquad \Delta H_R = - 206 \frac{kJ}{mol} \]
+Die hoch Exotherm bei 620K / 30bar wird durchgeführt um das Katalysator-Gift $CO$ in ppm-Bereich abzusenken.
+
+\subsubsection{Ammoniaksynthese}
+\[ \chemie{N_2} \chemie{PLUS} \chemie{H_2} \chemie{EQUILIBRIUM} \chemie{2 NH_3} \qquad \Delta H_R = - 91 \frac{kJ}{mol} \]
+Optimierungsproblem zwischen Temperatur (hoch: wenig $NH_3$, niedrige: Reaktionsgeschwindigkeit sinkt) und Druck ($100-300 bar$).\\
+Als Katalysatoren dienen, sehr ähnlich denen von Haber/Bosch gefundenen, immer noch Eisen-basierte Mischungen.\\
+In der Praxis wählt man 675K am Inlet und 720..770K am Outlet bei 100..300bar. Auf Grund der Exothermie ist eine Kühlung notwendig.
+Hier wählt man meist Hordenreaktoren mit direkter oder indirekter Külung.\\
+Durch die geringen Umsätze (20..30\%) wird das Synthesegas im Loop gefahren. Hierzu wird das entstandene $NH_3$ kondensiert und abgezogen, während der Rest rückgeführt wird. Technisch bieten sich verschiedenste Varianten der Verschaltung.
+
+
+\subsection{Steamcracking}
+\begin{itemize}
+\item Das Streamcracken dient der Herstellung von kurzkettigen Alkenen aus unreaktiven Alkanen
+\item Der Dampf dient als Verdünnungsmedium, um höhere Umsätze (vgl {\sc Le Chatelier}) zu erzielen
+\item Streamcracking erzeugt einen {\it Zoo von Produkten}, deren Anteile je nach Betriebsbedingung stark variieren
+\end{itemize}
+\subsubsection{Thermodyn. Aspekte}
+\begin{itemize}
+\item Steamcracking ist stark endotherm $\rightarrow$ Hohe Temperaturen
+\item Je höher die Temperatur, desto kurzkettiger die Alkene
+\end{itemize}
+\subsubsection{Mechanismus}
+Der Prozess folgt einer Radikalkettenreaktion ohne Katalysator.
+Start:
+\[ H_3C\,CH_3 \chemie{GIVES} 2\, H_3C\cdot \]
+Fortpflanzung:
+\[ H_3C\cdot + H_3C\,CH_3 \chemie{GIVES} H_3C\,\dot{C}H_2 \]
+\[ H_3C\,\dot{C}H_2 \chemie{GIVES} H_2C=CH_2 + H\cdot \]
+\[ H\cdot + H_3C\,CH_3 \chemie{GIVES} H_3C\,\dot{C}H_2 \]
+Abbruch: Rekombination beliebiger Radikale.
+\subsubsection{Kinetik}
+Streamcracken ist Reaktion 1. Ordnung $r \~ p_{Feed}$.\\
+Aber: hoher $p_{Feed}$ begünstig Zweitreaktionen und die Bildung von Verkokungsprodukten. Zudem wird die Einstellung des Gleichgewichts nicht begünstigst.\\
+$\rightarrow$ Partialdruck und Umsatz gering halten! Reaktivität beim Cracken steigt mit C-Zahl. Somit: Kurze Kontaktzeiten und schnelles quenchen.
+\subsection{Industrielle Ausführung}
+Aus den Vorüberlegungen folgt:
+\begin{itemize}
+\item hoher Wärmeübergang, hohe Temperatur
+\item geringer Partialdruck
+\item kurze Kontakt-/Verweilzeiten
+\item schnelles Quenchen, um Zusammensetzung zu erhalten
+\end{itemize}
+Daraus ergibt sich das Bauprinzip des Radiation-Convection-Ovens.
+\begin{itemize}
+\item Vorwärmen (auf $~ 870K$) von Naphta ($C_8...C_{10}$-Schnitt) in der Konvektionszone
+\item Kurze Kontaktzeit ($< 1s$) bei sehr hoher Temperatur ($~ 1120K$) in der Radiation-Zone
+\item Quenchen auf etwa $700K$ 
+\item $Re$-Zahlen von $10^6$, Länge der Rohre 50-200m.
+\end{itemize}
+
+\subsection{Fischer-Tropsch-Synthese}
+Das in den 20er Jahren von Fischer und Tropsch am Kaiser-Wilhelm-Institut entwickelte Verfahren dient dazu aus Synthesegasen beliebiger Herkunft (Erdgas, Kohle, Biomasse, ...) Aliphatische Kohlenwasserstoffe zu erzeugen.
+
+\subsubsection{Mechanismus}
+\[ CO + 2 H_2 \chemie{GIVES}{Fe,Co}{200-350°C\\25bar} -(CH_2)_n- + H_20 \qquad \Delta H_R = -152\frac{KJ}{mol}\]
+Auch wenn der Mechanismus nicht in letzter Wahrheit geklärt ist, wird wohl folgendes ablaufen:
+\begin{itemize}
+\item Adsorption $CO$
+\item Dissoziation $CO$
+\item Dissoziative Adsorption von $H_2$
+\item Transfer $2 H$ an Kohlenstoff
+\item Transfer von $2 H$ an Sauerstoff
+\item Desorption von $H_2O$
+\item Bildung einer $C-C$-Bindung
+\item Desorption des Alkans
+\end{itemize}
+Hierbei bestimmt die Kennzahl $\alpha$ die Kettenlänge:
+\[ \fbox{$ \displaystyle \alpha = \frac{k_{growth}}{k_{growth}+k_{diss.+hydr.}} $} \]
+$\alpha$ ist abhängig von Temperatur, $CO/H_2$-Verhältnis, Druck, Art des Katalysators, Promotoren.\\
+Bei $\alpha < 0,85$ werden eher $C_5..C_{10}$ erzeugt, bei $\alpha > 0,85$ eher Wachse.
+
+\subsubsection{Katalysatoren}
+Für die FT bieten sich Eisen, Cobalt, Nickel und Ruthenium als Katalysatoren an.
+In der Praxis werden aber nur Eisen und Cobalt verwendet, da die Gefahr der Vergiftung bei Nickel hoch ist (Carbonyl-Nickel!) und Ruthenium als seltenes, teures Material nicht in großen Anlagen eingesetzt werden kann.
+
+\subsubsection{Reaktoren}
+Grundsätzlich muss bedacht werden, dass die Reaktion exotherm ist. Somit muss die entstehende Wärme zuverlässig abgeführt werden, da Hot-Spots zu einer schnellen Desaktivierung des Katalysators führen und zudem vermehrt Methan gebildet wird.
+Man unterscheidet zwischen Low-Temp und High-Temp FT-Synthese:
+\begin{table}[H]
+\begin{tabular}{l|c|c} 
+                & \bf Low-Temp   & \bf High-Temp \\ \hline
+Temperatur	& 220..250	& 330..350 \\
+Methan	\%	& 2..5	& 10..11 \\
+$C_2$..$C_4$ Olefine & 5 & 24..27 \\
+$C_2$..$C_4$ Paraffine & 5..7 & 7..10 \\
+$C_5$..$C_11$ Benzin & 18..22 & 37..40 \\
+$C_12$..$C_18$ Diesel & 14..15 & 5..11 \\
+$> C_19$ & 41..52 & 4..8 \\
+Hydrophile & 3 & 5..6 \\
+Org. Hydrophob Sre. & traces & 1 \\
+\end{tabular}
+\end{table}
+
+Als Reaktoren werden in der Praxis Realisiert.
+\paragraph{Synthol}
+Zirkulierende Wirbelschicht für HT-FT-Synthese.
+Kennzeichen:
+\begin{itemize}
+\item Hohe Gasgeschwindigkeit
+\item Kleine Katalysator-Körner ($100 \mu m$-Bereich)
+\item Zwei Kühlzonen im Riser
+\item Klassisches Verfahren seit 1955
+\end{itemize}
+
+\paragraph{Sasol Advanced Synthol}
+Stationärer Wirbelschichtreaktor für HT-FT-Synthese.
+\begin{itemize}
+\item Wesentlich einfachere Konstruktion
+\item Geringerer Druckverlust
+\item Höhere Kapazität
+\item Katalysator permanent im Reaktor
+\end{itemize}
+
+\paragraph{ARGE}
+Festbett-Multitubular-Reaktor für LT-FT-Synthese.
+\begin{itemize}
+\item Geringer Umsatz pro Durchlauf, um moderates Temperatur und Konzentrationsprofil entlang des Rohres zu realisieren
+\item Wärmeabfuhr durch Wasserverdampfung
+\item Aktuell 2050 Rohre mit 12m Länge bei 5cm Innendurchmesser
+\end{itemize}
+
+\paragraph{Slurry}
+Slurry aus hochsiedenden Wachsen, in welchem Katalysator "rumschwimmt" und Gas eingeblasen wird.
+\begin{itemize}
+\item Einfache Bauweise
+\item Isothermie durch Kühlschlangen
+\item Geringer Druckverlust
+\item Optimale Umgebung für Katalysator
+\item Kontinuierlicher Wechsel des Katalysators möglich
+\end{itemize}
+
+\subsubsection{Bedeutung}
+Um einen Schnitt mit möglichst wertvollen Produkten zu erzielen, muss eine hohe Selektivität eingestellt werden.\\
+Hier kann das Beispiel der 1-Olefine genannt werden, welche einen 6x höheren Marktpreis als Benzin erzielen. Diese
+können optimal in einer Wirbelschicht mit Fe-Katalysator erzeugt werden (70\% 1-Olefine in $C_5$..$C_{10}$-Fraktion!).\\
+Besonders reizvoll ist die hohe Reinheit der Produkte, welche die einzelnen Fraktionen für Einsatz in Polymer-Herstellung oder
+auch für Hochleistungskraftstoffe ("Shell-V-Power") oder Ultra-Low-Sulfur-Diesel prädestiniert. Hierzu wird z.B. eine LT-FT genutzt, hinter
+welcher ein Hydrocracker geschaltet ist, so das bis zu 80\% Ausbeute erzielt werden kann.\\
+Eine andere Variante ist, statt Erdgas als LPG/LNG zum Markt zu transportieren, einfach eine FT zu nutzen.
 
