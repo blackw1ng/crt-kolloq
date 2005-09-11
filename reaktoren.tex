@@ -1,0 +1,150 @@
+\section{Typen von Reaktionsapparaten}
+\subsection{Nach Art der Betriebsweise}
+\subsubsection{Diskontinuierlicher Batch-Reaktor}
+Zusammensetzung der Komponenten im Apparat ändern sich ständig. Reaktor arbeitet insationär für eine definierte Zeit.\\
+Vorteile:
+\begin{itemize}
+\item Flexibilität
+\item hohe Umsätze durch beliebig lange Reakionszeiten
+\end{itemize}
+Nachteile:
+\begin{itemize}
+\item Totzeiten durch Füllen, Entleeren, Säubern
+\item hoher Steuer und Regelungsaufwand
+\end{itemize}
+Anwendungen sind somit die Specialties mit $< 1000t/a$.
+
+\subsubsection{Kontinuierliche Betriebsweise}
+Edukte werden kontinuierlich zugeführt, Produkte kontinuierlich abgezogen. Alle Prozessparamter sind konstant. Reaktor arbeitet somit statinonär.
+Vorteile:
+\begin{itemize}
+\item Gut Automatisierbar
+\item Geringe Stillstandszeiten
+\item gleichbleibende Produktqualität
+\end{itemize}
+Nachteile:
+\begin{itemize}
+\item geringere Flexibilität
+\item Eduktqualität muss gleichbleibend sein
+\item hohe Investitionskosten
+\end{itemize}
+Anwendung sind Großproduktionen. Allerdings werden zunehmen auch kontinuierliche Mikroreaktoren an Stelle von Batchreaktoren eingesetzt.
+
+\subsubsection{Halbkontinuierliche Prozesse}
+\begin{enumerate}
+\item Ein Reaktand liegt im Überschuss zu, der andere wird sukzessive zugegeben.\\
+Bsp. Nitrierung von Benzol
+\item Ein Produkt wird kontinuierlich abgezogen, zwecks Verschiebung des Gleichgewichts.\\
+Bsp. Abziehen von Wasser bei der Veresterung
+\item Ein Reaktand liegt vor, anderer wird zugegeben, Produkt wird kontinuierlich abgezogen.
+\end{enumerate}
+
+\subsection{nach Art der Phasen}
+\subsubsection{Einphasige Systeme}
+\paragraph{Rührkessel}
+\begin{itemize}
+\item sowohl Batch/Fed-Batch oder Konti einsetzbar
+\item Dampf/Kühlwasser für Wärmetausch durch Heiz- oder Kühlschlangen
+\item Verschiedene Reaktoren mit unterschiedlichen Leistungs- und Mischzeitcharakteristika
+\end{itemize}
+
+Wichtig hier, ist besonders die Auswahl des geeigneten Misch bzw. Rührgerätes. Hierbei ist das wichtigste Auswahlkriterium die Viskosität.
+Zusätzlich ist noch nach der gewünschten vorherrschenden Strömungsrichtung (radial oder axial) auszuwählen.\\
+Kriterium für die Eignung eines Rührers ist:
+\begin{itemize}
+\item Batch-Reaktor: Mischzeit sollte kleiner als die Zeitkonstante der Reaktion sein: \[ t_m \le 0,1 \frac{c_{1,0}}{r_0} \]
+\item Konti-Reaktor: Mischzeit sollte kleiner als die hydrodyn. Verweilzeit sein: \[ t_m \le 0,1 \tau \]
+\end{itemize}
+
+\paragraph{Strömungsrohre}
+Analogie: Strömungsrohr $\leftrightarrow$ diskont. Rührkessel! Vergleiche $c_{PFTR}$-$\tau$ $c_{BSTR}$-$t_R$, diese sind identisch!\\
+Strömungsrohre eignen sich vor allem bei
+\begin{itemize}
+\item stark exo-/endothermen Reaktionen, da Wärmeaustauschfläche bezogen auf Volumen sehr groß ist
+\item Reaktionen mit hohem Durchsatz
+\end{itemize}
+Einsatzbeispiel: Streamcracking
+
+\subsubsection{Mehrphasige Systeme}
+In mehrphasigen Systemen spielen Wärme- und Stofftransport eine entscheidende Rolle für Umsatz und Selektivität.
+Entscheidende Entscheidende Parameter hierbei sind vor allem: Stoff- / Wärmeübergangskoeffizienten und die Austauschfläche.
+\paragraph{Fluid-Feststoff}
+Reaktion an Oberfläche mit Verbrauch des Feststoffes oder Katalyse.\\
+Festbettreaktoren können isotherm, polytrop oder adiabat betrieben werden.\\
+Zur Begrenzung der Temperatur bieten sich an:
+\begin{itemize}
+\item Rohrbündelreaktor (Multitubular Reactor)
+\item Hordenreaktor (Rack-type Reactor)
+\end{itemize}
+\paragraph{Wirbelschichtreaktoren}
+Vorteile von Wirbelschichtreaktoren sind
+\begin{itemize}
+\item Feststoff ist im fluidisierten Zustand einfach zu handlen
+\item Nutzung sehr kleiner Partikel leicht möglich. Dadurch geringe Makrokinetische Limitierung
+\item Gute radiale und axiale Vermischung
+\item Guter Wärmeübergang
+\end{itemize}
+Nachteile
+\begin{itemize}
+\item Breite Verweilzeitverteilung
+\item Abrasive Effekte
+\item Modellierung schwierig
+\end{itemize}
+Für Details zu Wirbekschichten: MVT Scriptum!
+Hier nur kurz:
+\[ \Delta p S = (1 -\varepsilon_{mf})SHg(\rho_p-\rho_g) \]
+
+\paragraph{Fluid-Fluid-Systeme}
+\begin{enumerate}
+\item Gas dispergiert in Flüssigkeit\\
+  Blasensäule, Bodenkolonne, Rührkessel
+\item Flüssigkeit in Gas dispergiert\\
+  Strahlwäscher, Sprühturm
+\item Flüssigkeit wird dem Gas als dünner Film ausgesetzt\\
+  Fallfilmreaktor, Trickle-Bed-Reaktor
+\end{enumerate}
+Zur Beurteilung der einzelnen Varianten bietet sich die Kennzahl B an.
+\[ \fbox{$ \displaystyle B = \frac{A\rho}{V_l} $} \]
+In Abhängigkeit der Ha-Zahl ergibt sich im Graph gegen $\eta$ folgendes Bild:
+\begin{figure}[H]
+\beginpicture
+\setcoordinatesystem units <2cm,2cm>
+\setplotarea x from -4 to 0, y from -2 to 0
+\axis bottom label {$\log B$} ticks numbered from -4 to 0 by 1 unlabeled short from -4 to 0 by 0.1 /
+\axis left label {\rotatebox{90}{$\log \eta$}} ticks numbered from -2 to 0 by 1 unlabeled short from -2 to 0 by 0.1  /
+\axis top /
+\axis right /
+\linethickness 0.1pt
+\setdots <2pt>
+\linethickness 1pt
+\setquadratic
+\setsolid
+\plot -4 -0.3 -3 -0.06 0 0 /
+\plot -4 -1.3 -2.65 -0.3 0 0 /
+\plot -4 -2 -2.5 -0.5 0 0 /
+\plot -3 -2 -1.8 -0.7 0 0 /
+\plot -2.1 -2 -1 -0.8 0 -0.15 /
+\setlinear
+\plot -1.5 -2 0 -0.5 /
+\put {Ha = 0,01} at -3.5 -0.35
+\put {0,05} at -3.75 -0.7
+\put {0,1} at -3.2 -0.7
+\put {0,3} at -2 -0.7
+\put {1,0} at -1.15 -0.7
+\put {3,0} at -0.2 -1
+\endpicture
+\end{figure}
+Übliches Einsatzgebiet ist: $2\cdot10^{-4} < B < 10^{-1}$.\\
+\begin{itemize}
+\item Für kleine Ha-Zahlen sorgt ein größeres B (Oberfläche!) nicht für größere Kapazitäten (Reaktion im Bulk!)
+\item Für schnelle Reaktionen (große Ha) muss eine große Oberfläche (B!) bereitgesetllt werden, da sonst $\eta$ sehr klein wird.
+\end{itemize}
+
+\paragraph{Dreiphasige Systeme}
+Hier treten Gas, Flüssigkeit und Feststoff in Wechselwirkung.
+\begin{itemize}
+\item Blasensäule mit Packung
+\item Rieselbettreaktor
+\item Dreiphasige Wirbelschicht
+\item Suspensionsreaktoren
+\end{itemize}
