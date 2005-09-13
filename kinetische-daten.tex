@@ -12,7 +12,7 @@ Als Methoden für den Scale-Up ergeben sich:
 \begin{tabular}{c|c} 
 \bf klassisch	& \bf modern \\ \hline
 emprische Betrachtung & Detailverständnis + Modellbildung \\
-stufenweiser Scale-U & in einem Schritt \\
+stufenweiser Scale-Up & in einem Schritt \\
 kostenintensiv & interdisziplinär \\
 Grundoperationen & Prozessdenken \\
 \end{tabular}
@@ -21,9 +21,9 @@ Grundoperationen & Prozessdenken \\
 \subsection{Ziel kinetischer Messungen}
 Mikrokinetik
 \begin{itemize}
-\item nicht Transporlimitiert
+\item nicht Transportlimitiert
 \item Beschreibung durch intrinsische Kinetik oder Kenntnis des Mechanismus
-\item Formalkinetisch vereinfachende Annahmen
+\item formalkinetisch vereinfachende Annahmen
 \end{itemize}
 Makrokinetik
 \begin{itemize}
@@ -44,14 +44,14 @@ BSTR: Zeitkonstante = $t_R$\\
 PFTR: Zeitkonstante = $\tau$
 
 \subsubsection{Differentialreaktoren}
-Bei Differentialreaktoren kan bei kleinen Umsätzen die Reaktionsgeschwindigkeit direkt bestimmt werden:
+Bei Differentialreaktoren kann bei kleinen Umsätzen die Reaktionsgeschwindigkeit direkt bestimmt werden:
 \[ \nu_{i} r = \frac{c_{i0}-(c_{i0}-dc_i)}{dt} = - c_{i0} \frac{dX_i}{dt} \]
-In der Praxis ist allerdings $\frac{dX_i}{dt}$ schwer bestimmtbar. Damit ist das Ergebnis einem $T$ bzw. $c$ nicht mehr genau zuzuordnen!
+In der Praxis ist allerdings $\frac{dX_i}{dt}$ schwer bestimmbar. Damit ist das Ergebnis einem $T$ bzw. $c$ nicht mehr genau zuzuordnen!
 
 \subsubsection{Schlaufenreaktor}
 Ein idealer CSTR verhält sich wie ein Schlaufenreaktor - Also großer Recycle Strom, gradientenlos.\\
 Die Stoffmengenänderungsgeschwindigkeit ergibt sich zu:
-\[ R_i = - \frac{\dot{n}_{i0} - \dot{n}_i}{V} \qquad R_k = \frac{N_{k0}dX_k}{m_{cat}} \]
+\[ R_i = - \frac{\dot{n}_{i0} - \dot{n}_i}{V} \qquad R_k = \frac{\dot{n}_{k0}dX_k}{m_{cat}} \]
 
 \subsection{Beispiele für spezielle Rohrreaktoren}
 \subsubsection{Heterogen Katalysierte Reaktionen}
@@ -70,8 +70,8 @@ Hier ist der Stofftransport von sehr großer Bedeutung!
 \end{itemize}
 \begin{enumerate}
 \item Laminarer Fallfilmabsorber\\
-Es werden Ausgangs und Ausgangskonzentrationen gemessen. Sehr interessant, wegen definierter Verweilzeit und Phasengrenzfläche.\\
-Besonders gut geeignet bei schnellen Reaktionen (sehr große {\sc Ha}-Zahl!)
+Es werden Eingangs- und Ausgangskonzentrationen gemessen. Sehr interessant, wegen definierter Verweilzeit und Phasengrenzfläche.\\
+Besonders gut geeignet bei schnellen Reaktionen (sehr große Ha-Zahl!)
 \item Laminarstrahlabsorber \\
 Durch die wechselnden Strömungsprofile ist die Verweilzeit berechenbar durch
 \[ \tau = \frac{\pi d^2 L}{4 \dot{V}_l} \]
@@ -93,11 +93,11 @@ Vorteil ist die generelle Anwendbarkeit und der geringe Aufwand der Berechnung. 
 
 \subsubsection{bei Potenzansätzen}
 \[ \fbox{$ \displaystyle r = k c_i^m $} \quad \rightarrow \quad \fbox{$ \displaystyle \ln r = ln k + m \ln c_i $}\]
-Graphische Auftragung $\ln r$-$c_i$. Achsenabschnitt: $k$, Steigung $m$.
+Graphische Auftragung $\ln r$-$\ln c_i$. Achsenabschnitt: $\ln k$, Steigung $m$.
 
 \subsubsection{bei hyperbolischen Ansätzen}
 \[ \fbox{$ \displaystyle r = \frac{k p_i}{1 + K p_i} $} \quad \rightarrow \quad r + K p_i r = k p_i \]
-\[ \frac{1}{k} + \frac{K}{k}p_i = \frac{p_i}{r} \quad \rightarrow \quad \fbox{$ \displaystyle \frac{p_i}{r} = \frac{K}{k} p_i + \frac{1}{R} $} \]
+\[ \fbox{$ \displaystyle \frac{p_i}{r} = \frac{K}{k} p_i + \frac{1}{k} $} \]
 Graphische Auftragung $\frac{p_i}{r}$-$p_i$. Achsenabschnitt: $\frac{1}{k}$, Steigung: $\frac{K}{k}$.
 
 \subsection{Integralmethode}

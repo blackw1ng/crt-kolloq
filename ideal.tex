@@ -10,7 +10,7 @@ Grenzfall		&			& Kombination von Elementen\\
 Zwei Grenzfälle:
 \begin{itemize}
 \item ideale Vermischung bis in die molekulare Ebene; z.B. CSTR
-\item keine axiale vermischeung; z.B. PFTR
+\item keine axiale Vermischung; z.B. PFTR
 \end{itemize}
 \subsection{Systematik des Bilanzierens}
 Wir brauchen:
@@ -27,20 +27,20 @@ gesamte Anlage, Reaktor, Fluidelement, Katalysatorpartikel, etc.\\
 Allgemeine Wortgleichung:\\
 $[$Akkumulation$]=[$Zustrom$]-[$Abstrom$]+[$Quelle/Senke$]$\\
 Massenbilanz:\\
-\[ \fbox{$\displaystyle \underbrace{\frac{\partial c_i}{\partial t}}_{\mbox{Akk.}}=\underbrace{-div\left(c_i\bar u\right)}_{\mbox{Konvektion}}
-+\underbrace{div\left(D^e_igradc_i\right)}_{\mbox{Dispersion}}+\underbrace{\sum_j\nu_{ij}r_j}_{\mbox{Reaktion}}$}\qquad\left[\frac{kmol}{m^3s}\right]  \]
+\[ \fbox{$\displaystyle \underbrace{\frac{\partial c_i}{\partial t}}_{\mbox{Akk.}}=\underbrace{-\div \left(c_i\bar u\right)}_{\mbox{Konvektion}}
++\underbrace{div\left(D^e_i grad c_i\right)}_{\mbox{Dispersion}}+\underbrace{\sum_j\nu_{ij}r_j}_{\mbox{Reaktion}}$}\qquad\left[\frac{kmol}{m^3s}\right]  \]
 Wärmebilanz:\\
 \[ \fbox{$\displaystyle \underbrace{\frac{\partial\left(\rho c_pT\right)}{\partial t}}_{\mbox{Akk.}}=
-\underbrace{-div\left(\rho c_pT\bar u\right)}_{\mbox{Konvektion}}+\underbrace{div\left(\lambda^egradT\right)}_{\mbox{eff. Wärmeltg.}}+
-\underbrace{\sum_j\left(-\Delta H_R\right)_jr_j}_{\mbox{Reaktion}}$}\qquad\left[\frac{kJ}{m^3s}\right]   \]
+\underbrace{-div\left(\rho c_p T\bar u\right)}_{\mbox{Konvektion}}+\underbrace{div\left(\lambda^e grad T\right)}_{\mbox{eff. Wärmeltg.}}+
+\underbrace{\sum_j\left(-\Delta H_R\right)_jr_j}_{\mbox{Reaktion}}$}\qquad\left[\frac{kJ}{m^3s}\right]  \]
 Bedeutung von Differentialoperatoren:\\
-\[ \underbrace{divD^e_i\underbrace{grad\underbrace{c_i}_{\mbox{scalar}}}_{\mbox{Vektor}}}_{\mbox{Skalar}}=\underbrace{D^e_i\left(\frac{\partial^2c_i}{\partial x^2}+ \frac{\partial^2c_i}{\partial y^2}+\frac{\partial^2c_i}{\partial z^2}\right)}_{\mbox{2. {\sc Fick}'sches Gesetz}} \]
+\[ \underbrace{div D^e_i\underbrace{grad\underbrace{c_i}_{\mbox{Skalar}}}_{\mbox{Vektor}}}_{\mbox{Skalar}}=\underbrace{D^e_i\left(\frac{\partial^2c_i}{\partial x^2}+ \frac{\partial^2c_i}{\partial y^2}+\frac{\partial^2c_i}{\partial z^2}\right)}_{\mbox{2. {\sc Fick}'sches Gesetz}} \]
 Divergenz $div$ transformiert Vektor in Skalar\\
 Gradient $grad$ transformiert Skalar in Vektor\\
 \subsection{idealer Rührkessel}
 Vollkommene Gleichheit der Konzentrationen und der Temperatur $\rightarrow$ Terme für Dispersion und Wärmeleitung entfallen.\\
 Massenbilanz:
-\[ \fbox{$\displaystyle \underbrace{\frac{dc_i}{dt}}_{\mbox{Akkumulation}}=\underbrace{\frac{\dot V_0}{V}c_{i0}}_{\mbox{Zustrom}}-\underbrace{\frac{\dot V_e}{V}c_{i}}_{\mbox{Abstrom}}+\underbrace{R_i}_{\mbox{Reaktion}}$}  \]
+\[ \fbox{$\displaystyle \underbrace{\frac{dc_i}{dt}}_{\mbox{Akkumulation}}=\underbrace{\frac{\dot V_0}{V}c_{i0}}_{\mbox{Zustrom}}-\underbrace{\frac{\dot V_e}{V}c_{i}}_{\mbox{Abstrom}}+\underbrace{\sum \nu_{ij} r_j}_{\mbox{Reaktion}}$}  \]
 Wärmebilanz:
 \[ \fbox{$\displaystyle \underbrace{\rho c_p\frac{dT}{dt}}_{\mbox{Akk.}}=
 \underbrace{\frac{\dot V_0}{V}\rho c_pT_0}_{\mbox{Zustrom}}-\underbrace{\frac{\dot V_e}{V}\rho c_pT}_{\mbox{Abstrom}}+
@@ -70,13 +70,13 @@ Der Umsatz einer Rührkesselkaskade bleibt immer in den Grenzen zwischen Rührkess
 Gewöhnlich werden in der Technik Kaskaden mit zwei bis fünf Kesseln realisiert.
 Hier liegt das Optimum zwischen höherem Umsatz und Investitionskosten.  
 \subsubsection{Halbkontinuierliche (semi-batch) Betriebsweise}
-Ein Reaktand wird im Reaktor vorgelegt, der andere wird kontinuierlcih hinzugegeben.\\
+Ein Reaktand wird im Reaktor vorgelegt, der andere wird kontinuierlich hinzugegeben.\\
 Diese Betriebsweise wird für stark exotherme Reaktionen, wie z.B. Nitrierungen, verwendet.\\
 Stoffmengenbilanz für den kontinuierlich zugegebenen Reaktanden $A_1$:\\
 $\dot V_e=0$; Reaktionsvolumen $V(t)$ ist zeitabhängig
 \[ \fbox{$\displaystyle \frac{dn_1}{dt}=\dot V_1c_{i,0}-V(t)\cdot r$} \]
 \subsubsection{Diskontinuierliche (batch) Betriebsweise}
-Es entfallen die Terme für Konvektion.\\
+Es entfallen die Terme für Konvektion und Dispersion.\\
 Massenbilanz:\\
 \[ \fbox{$\displaystyle \frac{dc_i}{dt}=\sum_j\nu_{ij}r_j$}  \]
 Wärmebilanz:\\
@@ -86,7 +86,7 @@ Bestimmung der Reaktionszeit $t_R$:
 Zur grafischen Bestimmung von $t_R$: Auftragung von $\frac{1}{rV}$ gegen $X$.\\
 $\rightarrow$ Integral von $0$ bis $X_R$ entspricht $\frac{t_R}{n_{1,0}}$.
 \begin{figure}[H]
-\includegraphics[width=87mm]{images/reaktionszeit.eps}
+\includegraphics[width=80mm]{images/reaktionszeit.eps}
 \end{figure}
 
 \subsection{Ideales Strömungsrohr (PFTR)}
@@ -95,7 +95,7 @@ Massenbilanz:
 \[ \fbox{$\displaystyle \frac{\partial c_i}{\partial t}=-\frac{\partial\left(c_iu\right)}{\partial z}+\sum_j\nu_{ij}r_j$} \]
 Üblicherweise {\it stationärer} Betrieb $\rightarrow$ $\frac{dc_i}{dt}=0$\\
 Wärmebilanz:
-\[ \fbox{$\underbrace{\frac{dT}{dz}}_{\mbox{Konvektion}}=\frac{1}{u\rho c_p}\underbrace{\left(\sum_{j}\left(-\Delta H_j\right)r_j\right)}_{\mbox{Wärmequelle/-senke}}-\underbrace{k_W\frac{A}{V}\left(T-T_K\right)}_{\mbox{Wärmetransport}}$} \]
+\[ \fbox{$\displaystyle \underbrace{\frac{dT}{dz}}_{\mbox{Konvektion}}=\frac{1}{u\rho c_p}\underbrace{\left(\sum_{j}\left(-\Delta H_j\right)r_j\right)}_{\mbox{Wärmequelle/-senke}}-\underbrace{k_W\frac{A}{V}\left(T-T_K\right)}_{\mbox{Wärmetransport}}$} \]
 Beim adiabaten Strömungsrohr entfällt der Wärmetransport durch die Wand (einzige Wärmeveränderung durch Reaktion).
 Für eine einzelne Reaktion folgt durch Verknüpfung mit dem Umsatz und Einführung der adiabaten Temperaturerhöhung $\Delta T_{ad}$
 \[ \fbox{$\displaystyle dT=\underbrace{\frac{c_{1,0}\left(-\Delta H_R\right)}{\rho_0\cdot \bar c_p}}_{\Delta T_{ad}}dX=\Delta T_{ad}dX$} \]
@@ -115,11 +115,11 @@ Drei Betriebsweisen:
 \item[a)] {\it gelöschtes System}\\
 Temperaturveränderung verursacht von selbst einen Rückgang zu einem einzigen stabilen Betriebspunkt.
 \item[b)] {\it gezündetes System}\\
-Wie a) nur auf hohem Temperaturniveau
+Wie a) jedoch auf hohem Temperaturniveau
 \item[c)] {\it instabiles System}\\
-Kleine Temperaturabweichung verursacht Zünden oder Erlöschen $\rightarrow$ stabiler Betriebspunkt stellt sich ein.
+Minimale Temperaturabweichung verursacht Zünden oder Erlöschen $\rightarrow$ stabiler Betriebspunkt stellt sich ein.
 \end{itemize}
 Instabiler Betriebspunkt wenn:
-\[ \fbox{$\frac{d \dot q_{rem}}{d\vartheta}<\frac{d \dot q_{gen}}{d\vartheta}$} \]
+\[ \fbox{$\displaystyle \frac{d \dot q_{rem}}{d\vartheta}<\frac{d \dot q_{gen}}{d\vartheta}$} \]
 Analoge Darstellung ist im $X-T$-Diagramm möglich: hier sind RHL's parallel. Umsätze im instabiler Bereich können nicht erreicht werden.
 

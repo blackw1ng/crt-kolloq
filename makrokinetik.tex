@@ -30,13 +30,16 @@ Annahmen:
 effektiver Diffusionskoeffizient: \[ \fbox{$ \displaystyle D_e=\frac{D\cdot \varepsilon}{\tau}$} \]
 $\tau$: Tortuisität ("Labyrinth-Faktor")\\
 $\varepsilon_p$: Porosität\\
-{\sc Bruggemann}-Gleichung: $\tau=\frac{1}{\sqrt{\varepsilon_p}}$\\
+{\sc Bruggemann}-Gleichung: 
+\[ \fbox{$ \displaystyle \tau=\frac{1}{\sqrt{\varepsilon_p}} $} \]
 grobe Näherung: $D_e \approx \frac{1}{10}D$\\
-Massenbilanz:\\
-\[ \mbox{(Diff.-fluss)}_{x'+dx}-\mbox{(Diff.-fluss)}_{x'}=\mbox{Verbr. d. Rkt. im Vol.-element} \]
-\[ j_{x'+dx}-j_{x'}=\underbrace{\Gamma}_{\mbox{Quelle/Senke}} \]
+
+\subsubsection{Massenbilanz}
+\[ \underbrace{\mbox{(Diff.-fluss)}_{x'+dx}}_{j_{x'+dx}} - \underbrace{\mbox{(Diff.-fluss)}_{x'}}_{j_{x'}}=\underbrace{\mbox{Verbr. d. Rkt. im Vol.-element}}_{\Gamma} \]
+Mit:
+\[ f = \frac{c}{c_b} \qquad x = \frac{x'}{R} \qquad \phi = R \]
 Nach Vereinfachung:
-\[ \fbox{$ \displaystyle \frac{d^2c}{dx'^2}+\frac{2}{x'}\frac{dc}{dx'}=\frac{kc^n}{D_e}$} \]
+\[ \fbox{$ \displaystyle \frac{d^2f}{dx^2}+\frac{2}{x}\frac{df}{dx}=\phi^2 R$} \]
 Randbedingungen:\\
 $x'=R \qquad \rightarrow \qquad c=c_s$\\
 $x'=0 \qquad \rightarrow \qquad \frac{dc}{dx'}=0$\\
@@ -46,7 +49,7 @@ $DaII$: {\sc Damköhler}-Zahl 2. Ordnung\\
 $\phi$ klein: niedrige Reaktionsgeschwindigkeit; Reaktion limitiert Gesamtgeschwindigkeit\\
 $\phi$ groß: hohe Reaktionsgeschwindigkeit; Diffusion limitiert Gesamtgeschwindigkeit\\
 Für andere Geometrien $\rightarrow$ modifiziertes Thiele-Modul:
-\[ \phi_P=\frac{V_P}{O_P}\cdot \sqrt{\frac{k\cdot c_s^{n-10}}{D_e}} \]
+\[ \fbox{$\displaystyle \phi_P=\frac{V_P}{O_P}\cdot \sqrt{\frac{k\cdot c_s^{n-10}}{D_e}} $} \]
 $V_P$: Volumen des Pellets\\
 $O_P$: Äußere Oberfläche des Pellets\\
 Wirkungsgrad im Pellet:\\
@@ -63,27 +66,24 @@ Mit steigender Reaktionsordnung sinkt die Wirkungsgradkurve nach unten.
 \item[C:] Kat mit hoher Aktivität: niedriger $D_e$, großer $R$ (Diffusion hemmt Reaktionsgeschwindigkeit)
 \end{itemize}
 Je größer das {\sc Thiele}-Modul, desto steiler fällt das Konzentrationsprofil zum Pelletmittelpunkt hin ab.
-Bei starker Diffusionshemmung findet die Reaktion deahalb nur in der Randzone statt. 
-$\rightarrow$ schnellere Deaktivierung, da Kat unvollständig genutzt\\
-Einfluss der Partikelgröße:\\
+Bei starker Diffusionshemmung findet die Reaktion deahalb nur in der Randzone statt. Deswegen
+schnellere Desaktivierung, da Katalysator unvollständig genutzt.
+
+\subsection{Einfluss der Partikelgröße}
 \begin{figure}[H]
 \includegraphics[width=87mm]{images/r_obs-d_p.eps}
 \end{figure}
 
 \subsection{Einfluss der Filmdiffusion auf die heterogene Katalyse}
-Ammoniakoxidation:\\
-\[ \quad \chemie{NH_3} \chemie{PLUS} \chemie{5O_2} \chemie{EQUILIBRIUM}{Pt-Netz}{ca. 900°C} \chemie{4NO} \chemie{PLUS} \chemie{6H_2O} \qquad \Delta H_R = - 906 \frac{kJ}{mol} \]
-sehr stark exotherm $\rightarrow$ Kontaktzeit: $1/1000\,s$ (!)\\
-
-Fluid mit linearer Geschwindigkeit $u$, Dichte $\rho$ und Viskosität $\nu$ umströmt Katalysatorkorn.\\
+Fluid mit Geschwindigkeit $u$, Dichte $\rho$ und Viskosität $\nu$ umströmt Katalysatorkorn.\\
 Molekulare Diffusion durch die laminare Grenzschicht mit der Filmdicke:
 \[ \delta=f\left(u,\rho,\nu,d_p\right) \]
 Filmtheorie (1. {\sc Fick}'sches Gesetz):\\
 \[ \fbox{$ \displaystyle J=-D\frac{dc}{dx}=\underbrace{\frac{D}{\delta}}_{\beta}\cdot\left(c_b-c_s\right)$} \]
 $\beta=f\left(u,\rho,\nu,d_p,D\right)$: Massentransportkoeffizient $\left[\frac{m}{s}\right]$\\
-\[ \fbox{$ \displaystyle r_obs=\beta\cdot\left(c_b-c_s\right)=k_s\cdot c^n_s\qquad\left[\frac{mol}{m^2s}\right]$} \]
+\[ \fbox{$ \displaystyle r_{obs}=\beta\cdot\left(c_b-c_s\right)=k_s\cdot c^n_s\qquad\left[\frac{mol}{m^2s}\right]$} \]
 \begin{table}[H]
-\begin{tabular}{ll}
+\begin{tabular}{p{4.3cm}p{4.3cm}}
 \bf Starke Limitierung durch Filmdiffusion	& \bf Keine Limitierung durch Filmdiffusion	\\
 (Diffusionsregime)				& (kinetisches Regime)				\\
 $\rightarrow$ steiler Konzentrationsgradient	& $\rightarrow$ kein Konzentrationsgradient	\\
@@ -113,8 +113,10 @@ für $Bi_m>100\rightarrow$ Filmdiffusion ist vernachlässigbar\\
 \subsection{Gleichzeitiger interner und externer Wärme- und Stofftransport}
 {\sc Prater}-Zahl:
 \[ \fbox{$ \displaystyle \beta_{Pr}=\frac{c_b\cdot D_e\cdot\left(-\Delta H_R\right)}{\lambda_e\cdot T_b}=\frac{\mbox{max. $\Delta T$ im Pellet}}{\mbox{Bulk-Temperatur}}=\frac{\Delta T_{max}}{T_b}$} \]
-$\beta_{Pr}>0$: exotherme Reaktion mit $\eta>1$ (wenn {\it stark} exotherm, selten) und $\eta<1$\\
-$\beta_{Pr}<0$: endotherme Reaktion mit $\eta<1$\\
+\begin{itemize}
+\item $\beta_{Pr}>0$: exotherme Reaktion mit $\eta>1$ (wenn {\it stark} exotherm, selten) und $\eta<1$
+\item $\beta_{Pr}<0$: endotherme Reaktion mit $\eta<1$
+\end{itemize}
 
 {\sc Arrhenius}-Zahl (Einfluss der Temperatur auf die Reaktion):\\
 \[ \fbox{$ \displaystyle \gamma=\frac{E_A}{RT_b}$} \]
@@ -164,7 +166,11 @@ Vereinfachungen:
 \[ y = 0: \qquad c_1=c_1^* \qquad c_2=c_{2,l} \]
 \[ y = \delta_l: \qquad c_1 = c_{1,l} \qquad c_2 = c_{2,l} \]
 \[ \fbox{$ \displaystyle d_{1,l} \frac{d^2c_2}{dy^2} = k c_1 $} \]
-Mit der dimensionslosen Größe {\sc Ha}:
+
+Mit Hilfe der Dimensionslosen {\sc Hatta}-Zahl:
+\[ \fbox{$\displaystyle Ha = \delta \sqrt{\frac{k}{D_{1,l}}} $} \]
+die Analogie zum {\sc Thiele}-Modul ist hier deutlich erkennbar.
+
 \[ Ha = \delta_l \sqrt{\frac{k}{D_{1,l}}} = \frac{\delta_l}{D_{1,l}} \sqrt{k D_{1,l}} = \frac{1}{k_{1,l}} \sqrt{k D_{1,l}} \]
 
 \subsubsection{Chemische Reaktion und Stofftransport}

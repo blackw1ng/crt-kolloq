@@ -23,42 +23,26 @@
 
 \subsubsection{Reaktionslaufzahl}
   \begin{displaymath}
-  \fbox{$ \displaystyle   \displaystyle   \displaystyle   \xi = \frac{n_i - n_{i0}}{\nu_i} $}
+  \fbox{$ \displaystyle \xi = \frac{n_i - n_{i0}}{\nu_i} $}
   \end{displaymath}
   \begin{itemize}
   \item $\xi = 0$: Reaktionsbeginn
-  \item $\xi = 1$: Reaktionsende
   \item $c_i = c_{i0} + \nu_i \lambda$
   \item $m_i = m_{i0} + M_i \nu_i \xi$
   \item $n_i = n_{i0} + \nu_i \xi$
   \end{itemize}
 
 \subsubsection{Umsatz}
-  \[ \fbox{$ \displaystyle   \displaystyle   \displaystyle    \mbox{Umsatz} = \frac{\mbox{Anteil an bereits Reagierter Komponente}}{\mbox{Anfangsmenge der Komponente}}$} \]
-  \begin{itemize}
-  \item Diskontinuierlich
-  \[ X_i = \frac{n_{i0} - n_i}{n_{i0}} = - \frac{\sum_{j=1}^{M} \nu_{ij} \xi_i}{n_{i0}} \]
-  \item Kontinuierlich
-  \[ \fbox{$ \displaystyle   \displaystyle   \displaystyle    X_i = \frac{\dot{n}_{i0} - \dot{n}_i}{\dot{n}_{i0}} $} \]
-  \end{itemize}
+  \[ \fbox{$ \displaystyle \mbox{Umsatz} = \frac{\mbox{Anteil an bereits Reagierter Komponente}}{\mbox{Anfangsmenge der Komponente}}$} \]
+  \[ \fbox{$ \displaystyle X_i = \frac{\dot{n}_{i0} - \dot{n}_i}{\dot{n}_{i0}} $} \]
 
 \subsubsection{Ausbeute}
   \[ \fbox{$ \displaystyle   \displaystyle   \displaystyle    \mbox{Ausbeute} = \frac{\mbox{Menge an gebildetem Produkt k}}{\mbox{Menge an zugegebener, limitierender Komponente i}} $} \]
-  \begin{itemize}
-  \item Diskontinuierlich
-  \[ Y_{ki} = \frac{\frac{n_k - n_{k0}}{\nu_k}}{\frac{n_{i0}}{\nu_i}} = \frac{n_k - n_{k0}}{n_{i0}} \frac{\left|\nu_i\right|}{\left|\nu_k\right|} \]
-  \item Kontinuierlich 
-  \[ Y_{ki} = \frac{\dot{n}_k - \dot{n}_{k0}}{\dot{n}_{i0}} \frac{\left|\nu_i\right|}{\left|\nu_k\right|} \]
-  \end{itemize}
+  \[ \fbox{$ \displaystyle Y_{ki} = \frac{\dot{n}_k - \dot{n}_{k0}}{\dot{n}_{i0}} \frac{\left|\nu_i\right|}{\left|\nu_k\right|}$} \]
 
 \subsubsection{Selektivität}
   \[ \fbox{$ \displaystyle   \displaystyle   \displaystyle    \mbox{Selektivität} = \frac{\mbox{Menge an gebildetem Produkt k}}{\mbox{Menge an umgesetztem Reaktanden i}} $} \]
-  \begin{itemize}
-  \item Diskontinuierlich
-  \[ S_{ki} = \frac{n_k - n_{k0}}{n_{i0} - n_i} \frac{\left|\nu_i\right|}{\left|\nu_k\right|} = \frac{Y_{ki}}{X_i} \]
-  \item Kontinuierlich
-  \[ S_{ki} = \frac{\dot{n}_k - \dot{n}_{k0}}{\dot{n}_{i0} - \dot{n}_i} \frac{\left|\nu_i\right|}{\left|\nu_k\right|} = \frac{Y_{ki}}{X_i} \]
-  \end{itemize}
+  \[ \fbox{$ \displaystyle S_{ki} = \frac{\dot{n}_k - \dot{n}_{k0}}{\dot{n}_{i0} - \dot{n}_i} \frac{\left|\nu_i\right|}{\left|\nu_k\right|} = \frac{Y_{ki}}{X_i} $} \]
 
 \subsubsection{Reaktorkenngrößen}
 \begin{itemize}

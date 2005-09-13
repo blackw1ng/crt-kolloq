@@ -8,7 +8,6 @@ Anzahl der Mole eines Elements:
 \[ b_h = \sum_{i=1}^N \beta_{hi} n_i \quad \sum_{i=1}^N \beta_{hi} \Delta n_i = 0\]
 
 \subsection{Element-Spezies-Matrix}
-Bsp. Methanolherstellung.
 \begin{table}[H]
 \begin{tabular}{|ccc|ccc|cccc|} \hline
 \multicolumn{3}{|c|}{ } & \multicolumn{7}{|c|}{$N = 7$} \\ \hline
@@ -21,7 +20,7 @@ $h$ & Elem & $i \rightarrow$    & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
 \end{tabular}
 \end{table}
 Matrix B hat den Rang $R_{\beta}=3$. \\
-Anzahl der Spezies meist größer als Anzahl der Elemente. Dann miest $R_{\beta} = L$.\\
+Anzahl der Spezies meist größer als Anzahl der Elemente. Deswegen dann  $R_{\beta} = L$.\\
 \[ R = N - R_{\beta} \]
 \begin{itemize}
 \item $R$ Zahl der Schlüsselkomponenten - Freie Unbekannte
@@ -56,7 +55,7 @@ $-2$ & $0$ & $1$ & $0$ & $0$ & $0$ & $1$ \\ \hline
 \end{table}
 Diese Gleichungen stellen die Schlüsselreaktionen dar.
 
-\subsubsection{Aus einem Satz bekannter Reaktionen}
+\subsubsection{Aus einem Satz bekannter Reaktionen - Reverse Approach}
 In der Praxis ist oftmals bekannt, welche Teil-Reaktionen ablaufen.
 Somit kann über den {\sc Gauss}-Algorithmus gelöst werden.
 Beim o.g. Beispiel:
@@ -92,11 +91,9 @@ Um sinnvolle Erkenntnisse aus den Berechnungen zu erhalten, welche den Reaktions
 
 \begin{enumerate}
 \item $M = R_{\nu} = N - R_{\beta}$ - Anzahl der wirklichen Reaktionen entspricht der Anzahl der Schlüsselreaktionen.\\
-  Bsp. 3 Isomere, 1 Schlüsselreaktion
-  \begin{itemize}
-     \item Parallelreaktion ($A_1 \rightarrow A_2$ und $A_1 \rightarrow A_3$)
-     \item Folgereaktion ($A_1 \rightarrow A_2 \rightarrow A_3$)
-  \end{itemize}
+  Bsp. 3 Isomere, 1 Schlüsselreaktion \\
+  Parallelreaktion ($A_1 \rightarrow A_2$ und $A_1 \rightarrow A_3$) \\
+  Folgereaktion ($A_1 \rightarrow A_2 \rightarrow A_3$) \\
   Entscheidung durch Konzentrationsmessung von $A_3$ an $t=0$. Wenn $\frac{dc_3}{dt}=0$, dann 2.
 \item $M > R_{\nu} = N - R_{\beta}$ - Mehr ablaufende Reaktionen als Schlüsselreaktionen
 \item $M < R_{\nu} = N - R_{\beta}$ - Eine oder mehrere Schlüsselreaktionen sind kinetisch unmöglich.\\
