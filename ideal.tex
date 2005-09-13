@@ -27,8 +27,8 @@ gesamte Anlage, Reaktor, Fluidelement, Katalysatorpartikel, etc.\\
 Allgemeine Wortgleichung:\\
 $[$Akkumulation$]=[$Zustrom$]-[$Abstrom$]+[$Quelle/Senke$]$\\
 Massenbilanz:\\
-\[ \fbox{$\displaystyle \underbrace{\frac{\partial c_i}{\partial t}}_{\mbox{Akk.}}=\underbrace{-\div \left(c_i\bar u\right)}_{\mbox{Konvektion}}
-+\underbrace{div\left(D^e_i grad c_i\right)}_{\mbox{Dispersion}}+\underbrace{\sum_j\nu_{ij}r_j}_{\mbox{Reaktion}}$}\qquad\left[\frac{kmol}{m^3s}\right]  \]
+\[ \fbox{$\displaystyle \underbrace{\frac{\partial c_i}{\partial t}}_{\mbox{Akk.}}=\underbrace{-div \left(c_i\bar u\right)}_{\mbox{Konvektion}}
++\underbrace{div \left(D^e_i grad c_i\right)}_{\mbox{Dispersion}}+\underbrace{\sum_j\nu_{ij}r_j}_{\mbox{Reaktion}}$}\qquad\left[\frac{kmol}{m^3s}\right]  \]
 Wärmebilanz:\\
 \[ \fbox{$\displaystyle \underbrace{\frac{\partial\left(\rho c_pT\right)}{\partial t}}_{\mbox{Akk.}}=
 \underbrace{-div\left(\rho c_p T\bar u\right)}_{\mbox{Konvektion}}+\underbrace{div\left(\lambda^e grad T\right)}_{\mbox{eff. Wärmeltg.}}+
@@ -95,7 +95,7 @@ Massenbilanz:
 \[ \fbox{$\displaystyle \frac{\partial c_i}{\partial t}=-\frac{\partial\left(c_iu\right)}{\partial z}+\sum_j\nu_{ij}r_j$} \]
 Üblicherweise {\it stationärer} Betrieb $\rightarrow$ $\frac{dc_i}{dt}=0$\\
 Wärmebilanz:
-\[ \fbox{$\displaystyle \underbrace{\frac{dT}{dz}}_{\mbox{Konvektion}}=\frac{1}{u\rho c_p}\underbrace{\left(\sum_{j}\left(-\Delta H_j\right)r_j\right)}_{\mbox{Wärmequelle/-senke}}-\underbrace{k_W\frac{A}{V}\left(T-T_K\right)}_{\mbox{Wärmetransport}}$} \]
+\[ \fbox{$\displaystyle \underbrace{\frac{dT}{dz}}_{\mbox{Konvektion}}=\frac{1}{u\rho c_p}\underbrace{\left(\sum_{j}\left(-\Delta H_j\right)r_j\right.}_{\mbox{Wärmequelle/-senke}}-\underbrace{\left.k_W\frac{A}{V}\left(T-T_K\right)\right)}_{\mbox{Wärmetransport}}$} \]
 Beim adiabaten Strömungsrohr entfällt der Wärmetransport durch die Wand (einzige Wärmeveränderung durch Reaktion).
 Für eine einzelne Reaktion folgt durch Verknüpfung mit dem Umsatz und Einführung der adiabaten Temperaturerhöhung $\Delta T_{ad}$
 \[ \fbox{$\displaystyle dT=\underbrace{\frac{c_{1,0}\left(-\Delta H_R\right)}{\rho_0\cdot \bar c_p}}_{\Delta T_{ad}}dX=\Delta T_{ad}dX$} \]
