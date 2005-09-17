@@ -49,12 +49,12 @@ Annahme macht Sinn, da Oberflächenreaktion maximal bimolekular sind.
 \subsection{Geschwindigkeitsgleichungen}
 Für die Elementarreaktionen ergeben sich:
 \begin{itemize}
-\item Adsorption: \[ r_{ads,i}=k_{ads,i}p_1\Theta_0 \qquad \mbox{mit} i=1,2,3,4 \]
-\item Desorption: \[ r_{des,i}=k_{des,i}\Theta_i \qquad \mbox{mit} i=1,2,3,4 \]
-\item Hinreaktion: \[ r_1=k_1\Theta_1\Theta_2 \]
-\item Rückreaktion: \[ r_2=k_2\Theta_3\Theta_4 \]
+\item Adsorption: \[ r_{ads,i}=k_{ads,i}p_1\theta_0 \qquad \mbox{mit} i=1,2,3,4 \]
+\item Desorption: \[ r_{des,i}=k_{des,i}\theta_i \qquad \mbox{mit} i=1,2,3,4 \]
+\item Hinreaktion: \[ r_1=k_1\theta_1\theta_2 \]
+\item Rückreaktion: \[ r_2=k_2\theta_3\theta_4 \]
 \end{itemize}
-\[ \sum_{i=1}^{N}\Theta_i+\Theta_0=1 \]
+\[ \sum_{i=1}^{N}\theta_i+\theta_0=1 \]
 
 \subsection{RDS}
 Entwicklung einer Geschwindigkeitsgleichung auf Basis des RDS
@@ -65,14 +65,14 @@ Entwicklung einer Geschwindigkeitsgleichung auf Basis des RDS
 Drei Fälle werden unterschieden:
 \begin{itemize}
 \item Oberflächenreaktion ist RDS
-\[ r=k_1\Theta_1\Theta_2-k_2\Theta_3\Theta_4 \]
+\[ r=k_1\theta_1\theta_2-k_2\theta_3\theta_4 \]
 mit $r_{Sor,Edukt} = r_{Sor,Produkt}=0$
 \item Sorption von Reaktand $A_1$ ist RDS
-\[ r=k_{ads,1}p_1\Theta_0-k_{des_1}\Theta_1 \]
+\[ r=k_{ads,1}p_1\theta_0-k_{des_1}\theta_1 \]
 \item Sorption von Produkt $A_3$ ist RDS 
-\[ r=k_{ads,3}p_3\Theta_0-k_{des_3}\Theta_3 \]
+\[ r=k_{ads,3}p_3\theta_0-k_{des_3}\theta_3 \]
 \end{itemize}
 Allgemeine Sorptionsisotherme für {\sc Langmuir}-{\sc Hinshelwood} - Mechanismus:
- \[ \fbox{$ \displaystyle \Theta_i=\frac{K_ip_i}{1+\sum_{q=1}^{N}K_qp_q}$}\qquad \mbox{mit} \qquad K_i=\frac{k_{ads,i}}{k_{des,i}} \] 
+ \[ \fbox{$ \displaystyle \theta_i=\frac{K_ip_i}{1+\sum_{q=1}^{N}K_qp_q}$}\qquad \mbox{mit} \qquad K_i=\frac{k_{ads,i}}{k_{des,i}} \] 
 
 

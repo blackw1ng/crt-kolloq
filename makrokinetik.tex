@@ -14,7 +14,7 @@ Hauptwiderstand für den Massentransport $\rightarrow$ im Pellet\\
 Hauptwiderstand für den Wärmetransport $\rightarrow$ im Film\\
 
 Wirkungsgrad:
-\[ \eta = \frac{\mbox{mittlere Reaktionsgeschw. im Pellet}}{\mbox{Reaktionsgeschw. bei Oberflächenbedingungen}} = \frac{r_{e,effektiv}}{r_{s,Oberfl.}} \]
+\[ \fbox{$ \displaystyle \eta = \frac{r_e}{r_s} $} = \frac{\mbox{mittlere Reaktionsgeschw. im Pellet}}{\mbox{Reaktionsgeschw. bei Oberflächenbedingungen}} \]
 
 \subsection{Porendiffusion im isothermen Katalysatorkorn}
 Annahmen:
@@ -27,9 +27,8 @@ Annahmen:
 \item Katalysatorpartikel ist pseudo-homogenes System
 \end{itemize}
 1. {\sc Fick}'sches Gesetz: \[ \fbox{$ \displaystyle j=D_e\frac{dc}{dx}$} \]
-effektiver Diffusionskoeffizient: \[ \fbox{$ \displaystyle D_e=\frac{D\cdot \varepsilon}{\tau}$} \]
-$\tau$: Tortuisität ("Labyrinth-Faktor")\\
-$\varepsilon_p$: Porosität\\
+effektiver Diffusionskoeffizient: \[ \fbox{$ \displaystyle D_e = \frac{\varepsilon}{\tau} D$} \]
+{\sc Bosanquet}-Gleichung: \[ \fbox{$ \displaystyle \frac{1}{D_e} = \frac{1}{D_{m,e}} + \frac{1}{D_{k,e}} $} \]
 {\sc Bruggemann}-Gleichung: 
 \[ \fbox{$ \displaystyle \tau=\frac{1}{\sqrt{\varepsilon_p}} $} \]
 grobe Näherung: $D_e \approx \frac{1}{10}D$\\
@@ -53,9 +52,9 @@ Für andere Geometrien $\rightarrow$ modifiziertes Thiele-Modul:
 $V_P$: Volumen des Pellets\\
 $O_P$: Äußere Oberfläche des Pellets\\
 Wirkungsgrad im Pellet:\\
-\[ \eta=\frac{3}{\phi}\left(\frac{1}{\tanh\phi}-\frac{1}{\phi}\right) \]
+\[ \fbox{$ \displaystyle \eta=\frac{3}{\phi}\left(\frac{1}{\tanh\phi}-\frac{1}{\phi}\right) $} \]
 Für $\phi>3$ ist $\tanh\phi\approx1$ und es gilt:
-\[ \fbox{$ \displaystyle \eta=\frac{3}{\phi}$} \]
+\[ \displaystyle \eta=\frac{3}{\phi} \quad \mbox{sowie} \quad \phi = \frac{\Phi}{3} + 1 \]
 \begin{figure}[H]
 \includegraphics[width=87mm]{images/eta-thiele.eps}
 \end{figure}
@@ -81,7 +80,7 @@ Molekulare Diffusion durch die laminare Grenzschicht mit der Filmdicke:
 Filmtheorie (1. {\sc Fick}'sches Gesetz):\\
 \[ \fbox{$ \displaystyle J=-D\frac{dc}{dx}=\underbrace{\frac{D}{\delta}}_{\beta}\cdot\left(c_b-c_s\right)$} \]
 $\beta=f\left(u,\rho,\nu,d_p,D\right)$: Massentransportkoeffizient $\left[\frac{m}{s}\right]$\\
-\[ \fbox{$ \displaystyle r_{obs}=\beta\cdot\left(c_b-c_s\right)=k_s\cdot c^n_s\qquad\left[\frac{mol}{m^2s}\right]$} \]
+\[ \fbox{$ \displaystyle r_{obs}=\beta\cdot\left(c_b-c_s\right)=k_s\cdot c^n_s = \frac{n_{true}+1}{2} $} \qquad\left[\frac{mol}{m^2s}\right] \]
 \begin{table}[H]
 \begin{tabular}{p{4.3cm}p{4.3cm}}
 \bf Starke Limitierung durch Filmdiffusion	& \bf Keine Limitierung durch Filmdiffusion	\\
@@ -169,8 +168,9 @@ Vereinfachungen:
 \[ \fbox{$ \displaystyle d_{1,l} \frac{d^2c_2}{dy^2} = k c_1 $} \]
 
 Mit Hilfe der Dimensionslosen {\sc Hatta}-Zahl:
-\[ \fbox{$\displaystyle Ha = \delta \sqrt{\frac{k}{D_{1,l}}} $} \]
-die Analogie zum {\sc Thiele}-Modul ist hier deutlich erkennbar.
+\[ \fbox{$\displaystyle Ha = \delta \sqrt{\frac{k c_1^{* n-1}}{D_{1,l}}} $} \]
+Das analoge {\sc Thiele}-Modul stellt das Verhältnis von Reaktion zu Diffusion bei Fluid-Fest (Katalysator) Reaktionen dar, während die
+{\sc Hatta}-Zahl selbiges für Fluid-Fluid Reaktionen quantifiziert.
 
 \[ Ha = \delta_l \sqrt{\frac{k}{D_{1,l}}} = \frac{\delta_l}{D_{1,l}} \sqrt{k D_{1,l}} = \frac{1}{k_{1,l}} \sqrt{k D_{1,l}} \]
 
