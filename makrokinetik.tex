@@ -36,9 +36,9 @@ grobe Näherung: $D_e \approx \frac{1}{10}D$\\
 \subsubsection{Massenbilanz}
 \[ \underbrace{\mbox{(Diff.-fluss)}_{x'+dx}}_{j_{x'+dx}} - \underbrace{\mbox{(Diff.-fluss)}_{x'}}_{j_{x'}}=\underbrace{\mbox{Verbr. d. Rkt. im Vol.-element}}_{\Gamma} \]
 Mit:
-\[ f = \frac{c}{c_b} \qquad x = \frac{x'}{R} \qquad \phi = R \]
+\[ f = \frac{c}{c_b} \qquad x = \frac{x'}{R} \]
 Nach Vereinfachung:
-\[ \fbox{$ \displaystyle \frac{d^2f}{dx^2}+\frac{2}{x}\frac{df}{dx}=\phi^2 R$} \]
+\[ \fbox{$ \displaystyle \frac{d^2f}{dx^2}+\frac{2}{x}\frac{df}{dx}=\phi^2 f^n$} \]
 Randbedingungen:\\
 $x'=R \qquad \rightarrow \qquad c=c_s$\\
 $x'=0 \qquad \rightarrow \qquad \frac{dc}{dx'}=0$\\
@@ -56,7 +56,9 @@ Wirkungsgrad im Pellet:\\
 Für $\phi>3$ ist $\tanh\phi\approx1$ und es gilt:
 \[ \displaystyle \eta=\frac{3}{\phi} \quad \mbox{sowie} \quad \phi = \frac{\Phi}{3} + 1 \]
 \begin{figure}[H]
+\begin{center}
 \includegraphics[width=87mm]{images/eta-thiele.eps}
+\end{center}
 \end{figure}
 Mit steigender Reaktionsordnung sinkt die Wirkungsgradkurve nach unten.
 \begin{itemize}
@@ -70,7 +72,9 @@ schnellere Desaktivierung, da Katalysator unvollständig genutzt.
 
 \subsection{Einfluss der Partikelgröße}
 \begin{figure}[H]
+\begin{center}
 \includegraphics[width=87mm]{images/r_obs-d_p.eps}
+\end{center}
 \end{figure}
 
 \subsection{Einfluss der Filmdiffusion auf die heterogene Katalyse}
@@ -95,7 +99,9 @@ $E_{A,obs}<5\,kJ/mol$				& $E_{A,obs}=E_{A,true}$			\\
 
 \subsection{Zusammenwirken von internem und externen Massentransport}
 \begin{figure}[H]
+\begin{center}
 \includegraphics[width=87mm]{images/int-ext.eps}
+\end{center}
 \end{figure}
 Bei sehr hohen Temperaturen:
 \begin{itemize}
@@ -112,15 +118,16 @@ für $Bi_m>100\rightarrow$ Filmdiffusion ist vernachlässigbar\\
 \subsection{Gleichzeitiger interner und externer Wärme- und Stofftransport}
 {\sc Prater}-Zahl:
 \[ \fbox{$ \displaystyle \beta_{Pr}=\frac{c_b\cdot D_e\cdot\left(-\Delta H_R\right)}{\lambda_e\cdot T_b}=\frac{\mbox{max. $\Delta T$ im Pellet}}{\mbox{Bulk-Temperatur}}=\frac{\Delta T_{max}}{T_b}$} \]
+Die {\sc Prater}-Zahl quantifiziert das Termperaturgefälle.
 \begin{itemize}
 \item $\beta_{Pr}>0$: exotherme Reaktion mit $\eta>1$ (wenn {\it stark} exotherm, selten) und $\eta<1$
 \item $\beta_{Pr}<0$: endotherme Reaktion mit $\eta<1$
 \end{itemize}
-
-{\sc Arrhenius}-Zahl (Einfluss der Temperatur auf die Reaktion):\\
+Die {\sc Arrhenius}-Zahl beschreibt den Einfluss der Temperatur auf die Reaktion:\\
 \[ \fbox{$ \displaystyle \gamma=\frac{E_A}{RT_b}$} \]
-Keine Transporthemmung (willkürliche Festlegung):\\
-$\eta=\frac{r_{obs}}{r\left(T_b,\,c_b\right)}=1\pm 0,05$\\
+
+Keine Transporthemmung (willkürliche Festlegung):
+\[\eta=\frac{r_{obs}}{r\left(T_b,\,c_b\right)}=1\pm 0,05 \]
 {\sc Weisz-Prater}-Kriterium:\\
 \[ \fbox{$ \displaystyle \Phi=\frac{r_{obs}\cdot R^2}{c_s\cdot D_e}=\phi^2\cdot\eta$} \]
 $\Phi$: {\sc Weisz}-Modul\\
@@ -167,7 +174,7 @@ Vereinfachungen:
 \[ y = \delta_l: \qquad c_1 = c_{1,l} \qquad c_2 = c_{2,l} \]
 \[ \fbox{$ \displaystyle d_{1,l} \frac{d^2c_2}{dy^2} = k c_1 $} \]
 
-Mit Hilfe der Dimensionslosen {\sc Hatta}-Zahl:
+Mit Hilfe der dimensionslosen {\sc Hatta}-Zahl:
 \[ \fbox{$\displaystyle Ha = \delta \sqrt{\frac{k c_1^{* n-1}}{D_{1,l}}} $} \]
 Das analoge {\sc Thiele}-Modul stellt das Verhältnis von Reaktion zu Diffusion bei Fluid-Fest (Katalysator) Reaktionen dar, während die
 {\sc Hatta}-Zahl selbiges für Fluid-Fluid Reaktionen quantifiziert.

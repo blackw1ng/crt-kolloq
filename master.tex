@@ -4,23 +4,14 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin1]{inputenc}
 
-\usepackage{german}
-\usepackage[german]{babel}
-
+%\usepackage{german}
+%\usepackage[german]{babel}
+%\usepackage{etex}
 % tweaking für pdf 
 \usepackage{ae}
-\usepackage{a4}
 %\usepackage{anysize}
-\usepackage[left=1cm,top=1cm,right=1cm,bottom=1cm,nofoot,nohead]{geometry}
+\usepackage[left=1cm,top=1cm,right=1cm,bottom=1.2cm,nofoot,nohead]{geometry}
 \pagestyle{plain}
-
-% references
-\usepackage[ps2pdf]{hyperref}
-\usepackage{varioref}
-
-% grafiken
-\usepackage{graphicx}
-%\usepackage{pictex}
 
 % speziell symbole
 \usepackage{latexsym}
@@ -28,28 +19,40 @@
 \usepackage{amssymb}
 \usepackage{mathbbol}
 \usepackage{pxfonts}
-\usepackage[small,compact]{titlesec}
+\usepackage{stmaryrd}
+%\usepackage[small,compact]{titlesec}
 \usepackage{float}
+
+% references
+\usepackage[ps2pdf]{hyperref}
+\usepackage{varioref}
+
+% PPCHTEX
+%\usepackage{m-pictex}
+\usepackage{m-ch-de}
+
+% grafiken
+\usepackage{graphicx}
+%\usepackage{pictex}
+
 
 % itemstacking
 \usepackage{atbeginend}
-\AfterBegin{itemize}{ \addtolength{\itemsep}{-2ex}}
-\AfterBegin{enumerate}{ \addtolength{\itemsep}{-2ex}}
+\AfterBegin{itemize}{ \addtolength{\itemsep}{-1.7ex}}
+\AfterBegin{enumerate}{ \addtolength{\itemsep}{-1.7ex}}
 \BeforeBegin{tabular}{ \vspace{-2ex} }
 \AfterEnd{tabular}{ \vspace{-2ex} }
 \BeforeBegin{figure}{ \vspace{-3ex} }
 \AfterEnd{figure}{ \vspace{-3ex} }
 
-% PPCHTEX
-\usepackage{m-pictex}
-\usepackage{m-ch-de}
 
 \hypersetup{%
 pdftitle = {CRT Formelsammlung},
 pdfsubject = {Kurzzusammenfassung und Formelsammlung zum Kernfach "Chemische Reaktionstechnik", CBI, Erlangen},
 pdfauthor = {Florian Enzenberger, Sebastian Werner},
 pdfcreator = {GhostScript},
-pdfproducer = {LaTeX}
+pdfproducer = {LaTeX},
+pdfstartview = {FitH},
 }
 
 % mehr zeuch aufs blatt
@@ -64,10 +67,20 @@ pdfproducer = {LaTeX}
 
 % neue commands
 \newcommand{\osum}{\sum \hspace*{-2.4ex}\vspace*{-1ex} \circ\hspace*{2.4ex}\vspace{1ex}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\def \fbx#1 {\fbox{$ \displaystyle #1$}}
+\def \bild[#1]#2 {\begin{figure}[H] \includegraphics[#1]{#2} \end{figure}}
+\newcommand{\grad}{ \mathrm{grad} \,}
+\renewcommand{\div}{ \mathrm{div} \,}
+\newcommand{\tot}{ \mathrm{rot} \,}
+
 
 \begin{document}
 
-%zweispaltig mit überschrift zentriert
+%%zweispaltig mit überschrift zentriert
 \twocolumn[{\csname @twocolumnfalse\endcsname
 {\centerline{ \Huge \sc Formelsammlung Chemische ReaktionsTechnik I}}
 {\centerline{ \it Florian Enzenberger, Friedrich Glenk, Daniel Ludwig, Matthias Pemsel \& Sebastian Werner, 2005 } }

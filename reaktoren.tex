@@ -1,7 +1,7 @@
 \section{Typen von Reaktionsapparaten}
 \subsection{Nach Art der Betriebsweise}
 \subsubsection{Diskontinuierlicher Batch-Reaktor}
-Zusammensetzung der Komponenten im Apparat ändern sich ständig. Reaktor arbeitet insationär für eine definierte Zeit.\\
+Zusammensetzung der Komponenten im Apparat ändern sich ständig. Reaktor arbeitet instationär für eine definierte Zeit.\\
 Vorteile:
 \begin{itemize}
 \item Flexibilität
@@ -104,17 +104,16 @@ Hier nur kurz:
   Fallfilmreaktor, Trickle-Bed-Reaktor
 \end{enumerate}
 Zur Beurteilung der einzelnen Varianten bietet sich die Kennzahl B an.
-\[ \fbox{$ \displaystyle B = \frac{A\delta}{V_l} $} \]
+\[ \fbox{$ \displaystyle B = \frac{\mbox{Grenzfilmvolumen}}{\mbox{Flüssigkeitsvolumen}}= \frac{A\delta}{V_l} $} \]
 In Abhängigkeit der Ha-Zahl ergibt sich im Graph gegen $\eta$ folgendes Bild:
 \begin{figure}[H]
 \beginpicture
-\setcoordinatesystem units <2cm,2cm>
+\setcoordinatesystem units <1.7cm,1.7cm>
 \setplotarea x from -4 to 0, y from -2 to 0
 \axis bottom label {$\log B$} ticks numbered from -4 to 0 by 1 unlabeled short from -4 to 0 by 0.1 /
 \axis left label {\rotatebox{90}{$\log \eta$}} ticks numbered from -2 to 0 by 1 unlabeled short from -2 to 0 by 0.1  /
 \axis top /
 \axis right /
-\linethickness 0.1pt
 \setdots <2pt>
 \linethickness 1pt
 \setquadratic
@@ -132,9 +131,13 @@ In Abhängigkeit der Ha-Zahl ergibt sich im Graph gegen $\eta$ folgendes Bild:
 \put {0,3} at -2 -0.7
 \put {1,0} at -1.15 -0.7
 \put {3,0} at -0.2 -1
+\put {operation range} at -1.9 -1.3
+\linethickness 3pt
+\plot -3.7 -1.4 -1.1 -1.4 /
 \endpicture
 \end{figure}
-Übliches Einsatzgebiet ist: $2\cdot10^{-4} < B < 10^{-1}$.\\
+
+Übliches Einsatzgebiet ist: $2\cdot10^{-4} < B < 10^{-1}$.
 \begin{itemize}
 \item Für kleine Ha-Zahlen sorgt ein größeres B (Oberfläche!) nicht für größere Kapazitäten (Reaktion im Bulk!)
 \item Für schnelle Reaktionen (große Ha) muss eine große Oberfläche (B!) bereitgesetllt werden, da sonst $\eta$ sehr klein wird.
